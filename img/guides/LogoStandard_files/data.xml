@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VisioDocument>
+	<DocumentProperties>
+		<Title></Title>
+		<HyperlinkBase href=""></HyperlinkBase>
+	</DocumentProperties>
+	<Pages>
+		<Page ID="0" Name="Page-1" NameU="Page-1">
+			<PageProps>
+				<PageScale Unit="MM">0.039370078740157</PageScale>
+				<DrawingScale Unit="MM">0.039370078740157</DrawingScale>
+			</PageProps>
+			<Layer IX="0">
+				<Name>Container</Name>
+				<NameUniv>Container</NameUniv>
+				<Visible>1</Visible>
+			</Layer>
+			<Layer IX="1">
+				<Name>Connector</Name>
+				<NameUniv>Connector</NameUniv>
+				<Visible>1</Visible>
+			</Layer>
+			<Shapes>
+				<Shape ID="9" UniqueID="{848C11B2-351C-4AD0-A1FE-A07A6675AC9E}" Name="Wire" NameU="Wire" Master="4">
+					<Text>مشخصات نشان تجاری</Text>
+					<XForm>
+						<PinX Unit="MM">9.041994746901546</PinX>
+						<PinY Unit="MM">4.210301837270345</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>0</LayerMember>
+					</LayerMem>
+				</Shape>
+				<Shape ID="54" UniqueID="{423788A7-8FA9-4E85-8A76-2C03B5A3E841}" Name="Wire.54" NameU="Wire.54" Master="4">
+					<Text>همسان‌سازی نشان تجاری</Text>
+					<XForm>
+						<PinX Unit="MM">2.897736216717815</PinX>
+						<PinY Unit="MM">4.210301837270345</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>0</LayerMember>
+					</LayerMem>
+				</Shape>
+				<Shape ID="35" UniqueID="{32B9EEF3-994D-482E-9EAF-EE7C01BCF22B}" Name="Sheet.35" NameU="Sheet.35">
+					<Text>نشان تجاری</Text>
+					<XForm>
+						<PinX Unit="MM">8.787335950496004</PinX>
+						<PinY Unit="MM">3.138670166229222</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="42" UniqueID="{4EE460B4-EF18-45F9-8632-9C050F5B7EF9}" Name="Sheet.42" NameU="Sheet.42">
+					<Text>حداقل اندازه:</Text>
+					<XForm>
+						<PinX Unit="MM">8.787335950496004</PinX>
+						<PinY Unit="MM">4.025590558690348</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="43" UniqueID="{8926177C-C4ED-465D-90A3-91A393D826B6}" Name="Sheet.43" NameU="Sheet.43">
+					<Text>موضوع: عرضx  ارتفاع
+چاپ: ۱۱x   ۶هزارم‌متر
+تارنما: ۴۶x  ۲۵ پیکسل</Text>
+					<XForm>
+						<PinX Unit="MM">8.787335950496004</PinX>
+						<PinY Unit="MM">1.181102362204724</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="105" UniqueID="{9AEAC0FB-CB97-4030-ABE0-D0DCF535AE95}" Name="Sheet.105" NameU="Sheet.105">
+					<XForm>
+						<PinX Unit="MM">3.113385819262404</PinX>
+						<PinY Unit="MM">5.610236227981689</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="90" UniqueID="{5F462F16-647B-4223-A37F-F746FC825E8B}" Name="Sheet.90" NameU="Sheet.90">
+					<Text>نشان تجاری</Text>
+					<XForm>
+						<PinX Unit="MM">3.113385819262404</PinX>
+						<PinY Unit="MM">5.629921267351767</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="101" UniqueID="{628ABE87-8E18-4A21-9D11-49B12583CEEF}" Name="Sheet.101" NameU="Sheet.101">
+					<Text>۲px</Text>
+					<XForm>
+						<PinX Unit="MM">2.992125984251969</PinX>
+						<PinY Unit="MM">6.417322834645670</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="102" UniqueID="{8780B89D-AB70-4616-820A-F7E94059A564}" Name="Sheet.102" NameU="Sheet.102">
+					<Text>۲px</Text>
+					<XForm>
+						<PinX Unit="MM">2.992125984251969</PinX>
+						<PinY Unit="MM">4.803149606299217</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="103" UniqueID="{E34EFBD3-F77C-4789-BF91-D701759BCA80}" Name="Sheet.103" NameU="Sheet.103">
+					<Text>۲px</Text>
+					<XForm>
+						<PinX Unit="MM">1.377952755905511</PinX>
+						<PinY Unit="MM">5.748031496062992</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="104" UniqueID="{EDB2BF49-A2EA-41BA-B6D2-4B033165F2AE}" Name="Sheet.104" NameU="Sheet.104">
+					<Text>۲px</Text>
+					<XForm>
+						<PinX Unit="MM">4.881889763779527</PinX>
+						<PinY Unit="MM">5.748031496062992</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="107" UniqueID="{48617A5B-9E1F-47C4-B83D-0EFC541A0830}" Name="Sheet.107" NameU="Sheet.107">
+					<XForm>
+						<PinX Unit="MM">8.832020989866086</PinX>
+						<PinY Unit="MM">5.610236227981688</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="27" UniqueID="{BFB963A4-3997-4CF0-9225-13427F1ABF3F}" Name="Sheet.27" NameU="Sheet.27">
+					<Text>نشان تجاری</Text>
+					<XForm>
+						<PinX Unit="MM">8.832020997375327</PinX>
+						<PinY Unit="MM">5.629921267351769</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="31" UniqueID="{B4B084AE-6E2F-4E99-852A-C8B8489EB289}" Name="Sheet.31" NameU="Sheet.31">
+					<Text>۲px</Text>
+					<XForm>
+						<PinX Unit="MM">8.713910753645610</PinX>
+						<PinY Unit="MM">6.417322834645672</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="32" UniqueID="{02B6F57E-39F2-4E89-8B81-492C97DED87D}" Name="Sheet.32" NameU="Sheet.32">
+					<Text>۲px</Text>
+					<XForm>
+						<PinX Unit="MM">8.713910753645610</PinX>
+						<PinY Unit="MM">4.803149606299215</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="33" UniqueID="{DDB35A68-BB3D-471F-B89E-771BB15100EE}" Name="Sheet.33" NameU="Sheet.33">
+					<Text>۲px</Text>
+					<XForm>
+						<PinX Unit="MM">8.005249336322782</PinX>
+						<PinY Unit="MM">5.748031496062994</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="34" UniqueID="{6A619301-A8FA-4946-B43A-34B55C3F2E34}" Name="Sheet.34" NameU="Sheet.34">
+					<Text>۲px</Text>
+					<XForm>
+						<PinX Unit="MM">9.658792643409392</PinX>
+						<PinY Unit="MM">5.748031496062994</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="108" UniqueID="{B67C3153-5AEC-4BD2-9F80-39A7A2B6BAA4}" Name="Sheet.108" NameU="Sheet.108">
+					<Text>فضای خالی:</Text>
+					<XForm>
+						<PinX Unit="MM">8.832020989866084</PinX>
+						<PinY Unit="MM">7.028652668416447</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="122" UniqueID="{9E39B2CE-F2EE-4240-9BD3-B2EA6FAA6825}" Name="Sheet.122" NameU="Sheet.122">
+					<Text>فضای خالی:</Text>
+					<XForm>
+						<PinX Unit="MM">3.113385819262404</PinX>
+						<PinY Unit="MM">7.048337722805022</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="141" UniqueID="{1AB193A6-3CD2-4494-896A-B51AA795B178}" Name="Sheet.141" NameU="Sheet.141">
+					<XForm>
+						<PinX Unit="MM">3.146498514171048</PinX>
+						<PinY Unit="MM">2.878390204979470</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="124" UniqueID="{1CC24041-EA12-4A39-84E5-6467F2EDD872}" Name="Sheet.124" NameU="Sheet.124">
+					<Text>نشان تجاری</Text>
+					<XForm>
+						<PinX Unit="MM">3.147623008839441</PinX>
+						<PinY Unit="MM">2.892371300448831</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="134" UniqueID="{97DFE781-EDD6-427C-834D-0D4335A355AF}" Name="Sheet.134" NameU="Sheet.134">
+					<Text>۲px</Text>
+					<XForm>
+						<PinX Unit="MM">3.042197984151700</PinX>
+						<PinY Unit="MM">3.365048117406386</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="135" UniqueID="{8A7D4FE1-5D3B-4B5C-900C-89B1829DFD21}" Name="Sheet.135" NameU="Sheet.135">
+					<Text>۲px</Text>
+					<XForm>
+						<PinX Unit="MM">3.047733080406508</PinX>
+						<PinY Unit="MM">2.377515314340799</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="136" UniqueID="{33DEA2DA-5879-426E-AD04-8C359641A340}" Name="Sheet.136" NameU="Sheet.136">
+					<Text>۲px</Text>
+					<XForm>
+						<PinX Unit="MM">1.963498548605804</PinX>
+						<PinY Unit="MM">2.974456623984954</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="137" UniqueID="{DC935BA0-EA1B-4167-B521-F35C9E0379FE}" Name="Sheet.137" NameU="Sheet.137">
+					<Text>۲px</Text>
+					<XForm>
+						<PinX Unit="MM">4.339322471917491</PinX>
+						<PinY Unit="MM">2.974456623984955</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="142" UniqueID="{77C2FDC2-B0B2-4B26-8240-4BE397C2C826}" Name="Sheet.142" NameU="Sheet.142">
+					<Text>حداقل اندازه:</Text>
+					<XForm>
+						<PinX Unit="MM">3.146498514171048</PinX>
+						<PinY Unit="MM">4.025590558690348</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="143" UniqueID="{75384245-829B-4506-A6FB-B7D62F1F3EB1}" Name="Sheet.143" NameU="Sheet.143">
+					<Text>موضوع: عرضx  ارتفاع
+چاپ: ۱۶x   ۹.۵هزارم‌متر
+تارنما: ۱۴۵x  ۳۵ پیکسل</Text>
+					<XForm>
+						<PinX Unit="MM">3.051181102362205</PinX>
+						<PinY Unit="MM">1.181102362204724</PinY>
+					</XForm>
+				</Shape>
+			</Shapes>
+		</Page>
+	</Pages>
+</VisioDocument>

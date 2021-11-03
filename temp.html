@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="fa">
+
+<head>
+    <link href="common.css" type="text/css" rel="stylesheet">
+    <link href="img/ui/favicon.ico" type="image/x-icon" rel="icon">
+    <style>
+        form {
+            margin: 1rem;
+        }
+
+        .inputBox {
+            margin: 1em 0 1em .2em;
+            border: 2px solid transparent;
+            border-radius: 4px;
+            box-sizing: border-box;
+            height: 54px;
+            width: 100%;
+        }
+
+        .inputFlex {
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-flex: 1;
+            box-flex: 1;
+            -webkit-flex-grow: 1;
+            flex-grow: 1;
+            -webkit-flex-shrink: 1;
+            flex-shrink: 1;
+            min-width: 0%;
+            position: relative
+        }
+
+
+        .lblTxtMod {
+            /* border and width */
+            -webkit-box-flex: 1;
+            -webkit-flex-grow: 1;
+            flex-grow: 1;
+            -webkit-flex-shrink: 1;
+            flex-shrink: 1;
+            background-color: transparent;
+            border: none;
+            display: block;
+            line-height: 24px;
+            min-width: 0%;
+            outline: none;
+        }
+
+        .inputBorder {
+            /* top and sides borders */
+            right: 0;
+            margin: 0;
+            padding: 0;
+            position: absolute;
+            width: 100%
+        }
+
+        .inputBox .inputBorder {
+            /* border around the input field */
+            border: 1px solid #dadce0;
+            -webkit-border-radius: 4px;
+            border-radius: 4px;
+            bottom: 0;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            /* top and sides borders */
+            height: 100%;
+            /* input field background */
+            background-color: transparent;
+        }
+
+
+        .inputBox:focus-within,
+        .inputBorder:focus-within {
+            border: 1px solid #4285f4;
+            -webkit-border-radius: 4px;
+            border-radius: 4px;
+            bottom: 0;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            /* top and sides borders */
+            height: 54px;
+            /* input field background */
+            background-color: transparent;
+        }
+
+
+        .lblTxt {
+            /* position of text label inside and on top */
+            -webkit-transform-origin: bottom right;
+            transform-origin: bottom right;
+            font: 400 16px Yekan, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+                Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+            pointer-events: none;
+            position: absolute;
+        }
+
+        .inputBox .lblTxtTrans {
+            /* position of the text Label inside and on the top */
+            background: #fff;
+            bottom: 17px;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            color: #5f6368;
+            font-size: 16px;
+            font-weight: 400;
+            right: 8px;
+            max-width: -webkit-calc(100% - (2*8px));
+            max-width: calc(100% - (2*8px));
+            overflow: hidden;
+            padding: 0 8px;
+            text-overflow: ellipsis;
+            -webkit-transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), opacity 150ms cubic-bezier(0.4, 0, 0.2, 1);
+            transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), opacity 150ms cubic-bezier(0.4, 0, 0.2, 1);
+            white-space: nowrap;
+            width: auto;
+            z-index: 1
+        }
+
+        .lblTxtMod:not([disabled]):focus~.lblTxt,
+        .lblTxtMod[badinput="true"]~.lblTxt,
+        .lblTxtMod:invalid~.lblTxt,
+        .lblTxtMod[data-keeper-edited]~.lblTxt {
+            /* animation and transition of the text label */
+            -webkit-transform: scale(.75) translateY(-39px);
+            transform: scale(.75) translateY(-39px);
+
+        }
+
+        .inputTxt {
+            /* animation and transition of the text label */
+            -webkit-border-radius: 4px;
+            border-radius: 4px;
+            color: #202124;
+            font-size: 16px;
+            height: 28px;
+            margin: 1px 1px 0 1px;
+            padding: 13px 15px;
+            z-index: 1
+        }
+
+        .lblTxtMod:not([disabled]):focus~.lblTxt {
+            /* text color after moving */
+            color: #1a73e8
+        }
+
+
+        /*        .inputBox .oJeWuf {
+            height: 50px;
+            color: #db4437;
+            color: #0f9d58;
+            color: #a1c2fa;
+            color: #d50000;
+            color: #202124;
+            color: #4285f4;
+            color: #d93025
+            color: rgba(0, 0, 0, 0.38);
+        }
+
+        */
+    </style>
+
+    <style>
+        .selection {
+            display: inline-flex;
+        }
+
+        input[type=checkbox] {
+            /* Double-sized Checkboxes */
+            -ms-transform: scale(1.5);
+            /* IE */
+            -moz-transform: scale(1.5);
+            /* FF */
+            -webkit-transform: scale(1.5);
+            /* Safari and Chrome */
+            -o-transform: scale(1.52);
+            /* Opera */
+            transform: scale(1.5);
+            padding: 10px;
+        }
+
+        /* Might want to wrap a span around your checkbox text */
+        label.pwdRevealLbl {
+            display: inline-flex;
+            align-items: center;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .pwdRevCheck {
+            display: none;
+        }
+
+        div.custCheckbox {
+            width: 1.25em;
+            height: 1.25em;
+            border: 2px solid #202124;
+            display: flex;
+            border-radius: 3px;
+            margin: auto;
+            flex-shrink: 0;
+            background: #fff;
+            transition: background 0.15s, border-color 0.15s;
+        }
+
+        div.custCheckbox::after {
+            content: '\2714';
+            align-self: center;
+            margin: 0 auto;
+            color: #fff;
+            transform: scale(0);
+            transition: transform 0.15s;
+        }
+
+        .pwdRevCheck:checked+.custCheckbox {
+            background: #1a73e8;
+            border-color: #1a73e8;
+
+        }
+
+        .pwdRevCheck:checked+.custCheckbox::after {
+            transform: scale(1);
+        }
+
+        div.checkboxPwdBox {
+            display: flex;
+            height: 48px;
+            width: 48px;
+            border-radius: 50%;
+            transition: background-color 1s;
+        }
+
+        div.checkboxPwdBox:hover {
+            background-color: rgba(0, 0, 0, 0.1);
+            transition: background-color .40s;
+        }
+
+        div.checkboxPwdBox:active,
+        div.checkboxPwdBox:focus {
+            background-color: rgba(26, 115, 232, 0.7)
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+    <div style="position: absolute; width:500px; height: 400px; margin: 10px; ">
+        <form>
+            <div class="inputBox">
+                <div class="inputFlex">
+                    <input type="email" class="lblTxtMod inputTxt" autocomplete="username" spellcheck="false"
+                        tabindex="0" aria-label="رایانامه یا شماره همراه" name="identifier" autocapitalize="none"
+                        id="identifierId" dir="auto">
+                    <div class="lblTxt lblTxtTrans" aria-hidden="true">رایانامه یا شماره همراه</div>
+                </div>
+                <div class="inputBorder"></div>
+            </div>
+            <div class="inputBox">
+                <div class="inputFlex">
+                    <input type="password" class="lblTxtMod inputTxt" autocomplete="current-password" spellcheck="false"
+                        tabindex="0" aria-label="کلمه رمز" name="pwd" autocapitalize="none" id="pwdId" dir="auto">
+                    <div class="lblTxt lblTxtTrans" aria-hidden="true">کلمه رمز</div>
+                </div>
+                <div class="inputBorder"></div>
+            </div>
+
+            <label class="pwdRevealLbl" for="pwdReveal">
+
+                <div class="checkboxPwdBox">
+
+                    <input class="pwdRevCheck" type="checkbox" aria-labelledby="selection" id="pwdReveal">
+                    <div class="custCheckbox"></div>
+                </div>
+                ظهور کلمه رمز
+            </label>
+
+
+        </form>
+    </div>
+</body>
+
+</html>

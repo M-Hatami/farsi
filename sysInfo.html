@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="fa">
+
+<head>
+    <title>دسترسی به اطلاعات برای پردازش داده</title>
+    <link href="img/ui/favicon.ico" type="image/x-icon" rel="icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#129C10" />
+
+    <script src="scripts/sysData.js"></script>
+    <style>
+        #sx,
+        #sy,
+        #px,
+        #py,
+        #cx,
+        #cy {
+            color: white;
+            padding: 0 1em;
+            font-weight: 600;
+
+        }
+
+        .screenXY {
+            background-color: mediumblue;
+            color: white;
+            padding: 0 1em;
+        }
+
+        section>div {
+            border: 2px solid grey;
+            box-shadow: 0 16px 24px 2px rgba(29, 17, 51, .04), 0 6px 32px 4px rgba(9, 32, 77, .12), 0 8px 12px -5px rgba(29, 17, 51, .12);
+            margin: 4px;
+            padding: 15px;
+        }
+    </style>
+    <link href="common.css" type="text/css" rel="stylesheet">
+</head>
+
+<body>
+    <section style="border: 1px solid grey; padding: 1em;">
+        <h1>دسترسی و جمع آوری اطلاعات برای پردازش داده</h1>
+        <div>
+            <div style="box-sizing: border-box;">
+                <h2>مختصات موشواره در صفحه نمایش، صفحه تارنما، و پنجره کاربر</h2>
+                <div class='screenXY'>
+                    صفحه نمایش (افقی): <span id="sx"></span>
+                    صفحه نمایش (عمودی): <span id="sy"></span> <br>
+                    صفحه تارنما (افقی): <span id="px"></span>
+                    صفحه تارنما (عمودی): <span id="py"></span> <br>
+                    مرورگر کاربر (افقی): <span id="cx"></span>
+                    مرورگر کاربر (عمودی): <span id="cy"></span>
+                </div>
+            </div>
+        </div>
+        <div>
+            <h2>برخی از اطلاعات پایه برای تحلیل بازخوردها</h2>
+            <p>
+                <span id="windowSize"></span><br>
+                <span id="sysInf"></span>
+            </p>
+        </div>
+        <div>
+            <h2>اطلاعات صفحه</h2>
+            <p id="windowInf"></p>
+            <p id="permResult"></p>
+            <p id="sessionResult"></p>
+        </div>
+        <div>
+            <h2>کار با وقایع و اشیاء صفحه کلید، کدام کلید وارد شد؟</h2>
+            <label for="message">این پنجره محدودیت یکصد و هشتاد نویسه دارد، میتوانید اطلاعات وارد کنید و پیامها را
+                مشاهده کنید</label><br>
+            <textarea id="message" name="Tracking" rows="2" cols="100" maxlength="180">
+                </textarea><br>
+            <span id='charactersLeft'></span><br>
+            <span id='lastKey'></span>
+        </div>
+
+    </section>
+</body>
+
+</html>

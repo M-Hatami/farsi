@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="fa">
+
+<head>
+    <link rel="stylesheet" href="common.css">
+    <title>The title says "⁦‫&#x2069;طریقه استفاده فارسی&#x2066;‬⁩" in Farsi.</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#129C10" />
+    <link href="img/ui/favicon.ico" type="image/x-icon" rel="icon">
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <header>
+        <table id="flag">
+            <tr>
+                <td class="first">
+                </td>
+            </tr>
+            <tr>
+                <td class="firstBorder">
+                </td>
+            </tr>
+            <tr class="middle">
+                <td>&#x262B;</td>
+            </tr>
+            <tr class="lastBorder">
+                <td>
+                </td>
+            </tr>
+            <tr class="last">
+                <td>
+
+                </td>
+            </tr>
+
+        </table>
+        <defs>
+            <linearGradient id="text-fill">
+                <stop offset="0%" stop-color="white" />
+                <stop offset="100%" stop-color="black" />
+            </linearGradient>
+        </defs>
+
+        <nav>
+            <ul>
+                <li><a href="#top">ابتدای صفحه</a></li>
+                <li><a href="styleGuide.html" target="_blank">الگوی راهنمای قالب تارنما</a></li>
+                <li><a href="layout.html" target="_blank">الگوی طرح بندی صفحات تارنما</a></li>
+                <li><a href="semantics.html" target="_blank">صفحه با طراحی شناختی Semantic HTML</a></li>
+                <li><a href="#pre">استفاده از برچسب <code>&lt;pre&gt;</code> برای نشان دادن نویسه ها همانگونه که نوشته
+                        شده
+                        اند
+                        در سرجای
+                        خودشان با استفاده از <code dir="ltr">dir="auto"</code></a></li>
+                <li><a href="#kbd">استفاده از برچسب <code>kbd</code> و css برای نمایش کلیدهای صفحه کلید در متن</a></li>
+                <li><a href="#code">برچسب <code>code</code> برای وارد کردن متن برنامه</a></li>
+                <li><a href="#mark">برجسته کردن یا به عبارت بهتر روشن کردن بخشی از متن با استفاده از برچسب
+                        <code>&lt;mark&gt;</code></a></li>
+                <li><a href="farsiListFormats.html" target="_blank">ساخت انواع فهرست فارسی در طراحی تارنما
+                    </a></li>
+                <li><a href="#ruby"> افزودن صدای تلفظ با استفاده از برچسب <code>&lt;ruby&gt;</code></a></li>
+                <li><a href="#inline">فارسی و نویسه های چپ به راست مثل اعداد و کلمات انگلیسی در داخل صفحه فارسی</a></li>
+                <ul>
+                    <li><a href="#inlineNumber">استفاده از عدد در متن</a></li>
+                    <li><a href="#inlineFaEn">فارسی و انگلیسی در یک خط</a></li>
+                    <li><a href="#inlineChng">استفاده از <code dir="ltr">dir="ltr"</code> برای تغییر سمت صفحه برعکس آنچه
+                            در
+                            <code>&lt;html&gt;</code> در ابتدای صفحه
+                            تعریف شده است</a></li>
+                    <li><a href="#unknownDir">اگر سمت و جهت متن ورودی را نمیدانید از <code dir="ltr">dir="auto"</code>
+                            استفاده
+                            کرده و اگر برچسبی وجود نداشت از
+                            برچسب
+                            <code>&lt;bdi&gt;</code> استفاده کنید</a></li>
+                    <li><a href="#bdi">استفاده از برچسب <code>&lt;bdi&gt;</code> برای تغییر سمت صفحه</a></li>
+                    <li><a href="#chat">خصوصیات اچ‌تی‌ام‌ال5 مثال زیر را در رابطه با یک جلسه گپ ارائه کرده است. به
+                            برچسبها
+                            خصوصاً <code dir="ltr">dir="auto"</code> و <code>&lt;bdi&gt;</code> توجه
+                            کنید</a></li>
+                    <li><a href="#bdo">استفاده از برچسب <code>&lt;bdo&gt;</code> برای تغییر سمت صفحه. نکته: این برچسب
+                            حتما
+                            باید
+                            با
+                            <code>dir</code> که
+                            با <code>rtl</code> یا <code>ltr</code> آمده استفاده شود و نمیتواند ارزش آن برابر
+                            <code>auto</code>
+                            باشد. بسیار
+                            به ندرت استفاده میشود</a></li>
+                    <li><a href="#equation">نوشتن معادله ریاضی به ترتیب با استفاده از <code>&lt;math&gt;</code>،
+                            <code>&lt;code&gt;</code>، و
+                            <code>&lt;var&gt;</code> به پشتیبانی مرورگرها برای هر یک توجه کنید</a></li>
+                </ul>
+                <li><a href="#supAddress">نشانی (آدرس)</a></li>
+                <ul>
+                    <li><a href="#subAddress">با استفاده از <code>&lt;address&gt;</code></a></li>
+                    <li><a href="#hCard">با استفاده از <code>&lt;hCard&gt;</code>. که خصوصیات زیادی دارد</a></li>
+                </ul>
+                <li><a href="#outputSlider">خروجی <code>&lt;output&gt;</code>، <code>&lt;input&gt;</code>، در داخل برچسب
+                        <code>&lt;form&gt;</code></a></li>
+                <li><a href="#table">جداول</a></li>
+                <li><a href="semantic.html" target="_blank">کار با چند رسانه‌ای، شامل صوت، تصویر، و پرونده‌های گرافیکی
+                        ثابت یا متحرک
+                        معروف به گیف </a></li>
+                <li><a href="#formRequiredValidation">راستی آزمایی گزینه های واجب و الزامی برگه اطلاعات بوسیله
+                        مرورگر</a></li>
+                <li><a href="form.html" target="_blank">جاوا اسکریپت: راستی آزمایی گزینه های واجب و الزامی برگه اطلاعات
+                        با اسکریپت</a>
+                </li>
+                <li><a href="formSignupV1.html" target="_blank">جاوا اسکریپت: راستی آزمایی گزینه های واجب و الزامی برگه
+                        اطلاعات
+                        با اسکریپت: با قالب‌بندی زیبا</a>
+                </li>
+                <li><a href="userGreeting.html" target="_blank">جاوا اسکریپت: خوش‌آمد گویی به کاربر</a></li>
+                <li><a href="numSys.html" target="_blank">جاوا اسکریپت: کار با اعداد فارسی: عدد، اعشار و درصد، واحدها،
+                        پول، اعداد علمی و
+                        مهندسی</a></li>
+                <li><a href="sysInfo.html" target="_blank">جاوا اسکریپت: جمع آوری و نمایش اطلاعات دستگاه کاربر</a></li>
+                <li><a href="dateTime.html" target="_blank">جاوا اسکریپت: کار با تاریخ و وقت و منطقه زمانی و ساعت</a>
+                </li>
+                <li><a href="dropdownMenu.html" target="_blank">جاوا اسکریپت و ساده بدون اسکریپت: فهرست بازشونده با
+                        امکان جستجو</a></li>
+                <li><a href="maintenanceMsg.html">جاوا اسکریپت: پیام مهم و قابل حذف توسط کاربر</a></li>
+                <li><a href="https://www.w3schools.com/cssref/trysel.asp?selector=:root" target="_blank">مرجع CSS
+                        selectors 1</a></li>
+                <li><a href="https://www.w3schools.com/cssref/css_selectors.asp" target="_blank">مرجع CSS
+                        selectors 2</a></li>
+                <li><a href="#"></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <hr class="headBorder">
+        <h1 id="top" class="pageTitle">اگر اچ‌تی‌ام‌ال دارای برچسب <dbi dir="auto">dir="rtl"</dbi> است، وقتی که میخواهید
+            فقط قسمتی را چپ
+            به
+            راست کنید
+            از برچسبهای
+            bdi یا bdo
+            استفاده کنید.
+        </h1>
+        <p dir="ltr"><span style="color: brown">&lt;!DOCTYPE </span><span style="color: red">html</span><span
+                style="color: brown">&gt;</span><br>
+            <span style="color: brown">&lt;html</span><span style="color: red"> dir</span><span
+                style="color: blue">="rtl"
+            </span><span style="color: red">lang</span><span style="color: blue">="fa"</span><span
+                style="color: brown">&gt;</span>
+        </p>
+
+        <hr class="headBorder">
+        <h2 id="pre">استفاده از برچسب <code>&lt;pre&gt;</code> برای نشان دادن نویسه ها همانگونه که نوشته شده اند در
+            سرجای
+            خودشان با استفاده از <code dir="ltr">dir="auto"</code></h2>
+        <pre dir="auto" style="font-size: large; font-family: 'Courier New', Courier, monospace;">
+        استفاده از نویسه های انگلیسی:
+        __ _ _   _ _ __ __ _ _ __  
+       / _` | | | | '__/ _` | '_ \ 
+      | (_| | |_| | | | (_| | | | |
+       \__, |\__,_|_|  \__,_|_| |_|
+          | |                      
+          |_|               
+  
+          استفاده از نویسه های فارسی (الف) ا _ \ / () farsi نوشته شده به حالت انگلیسی را از راست به چپ مینویسد <bdo dir="ltr">farsi</bdo>
+           __               _ 
+          / _ا             (_)
+         ا ا_ __ _ _ __ ___ _ 
+         ا  _/ _` ا '__/ __ا ا
+         ا اا (_ا ا ا  \__ \ ا
+         ا_ا \__,_ا_ا  ا___/_ا
+        
+      س‌س‌س  
+      س‌س‌س 
+س‌س‌س‌س‌س‌سس‌س‌س
+س‌س‌س‌س‌س‌سس‌س‌س
+                                                     
+    </pre>
+
+        <hr class="headBorder">
+        <h2 id="kbd">استفاده از برچسب <code>kbd</code> و css برای نمایش کلیدهای صفحه کلید در متن</h2>
+        <p>مثال: لطفاً کلیدهای <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>R</kbd> برای بارگذاری مجدد صفحه فشار دهید.</p>
+
+        <hr class="headBorder">
+        <H2 id="code">برچسب <code>code</code> برای وارد کردن متن و دستورالعملهای برنامه رایانه</H2>
+        <p>مثال: با استفاده از روش <code dir="ltr">push()</code> میتوان یک یا چند عنصر به انتهای یک آرایه افزود و طول
+            جدید
+            آرایه را
+            بازخورد
+            داد.</p>
+        <hr class="headBorder">
+
+        <h2 id="mark">برجسته کردن یا به عبارت بهتر روشن کردن بخشی از متن با استفاده از برچسب <code>&lt;mark&gt;</code>
+        </h2>
+        <p>چند نژاد از <mark>سمندر</mark> در جنگلهای بارانی شمال غرب اقیانوس آرام زیست میکنند.</p>
+
+
+
+        <hr class="headBorder">
+        <h2 id="ruby"> افزودن صدای تلفظ با استفاده از برچسب <code>&lt;ruby&gt;</code></h2>
+        <p><ruby>
+                Theorem <rp>(</rp>
+                <rt>ثییُریم</rt>
+                <rp>)</rp>
+            </ruby> به معنی قضیه منطقی است
+        </p>
+
+        <hr class="headBorder">
+        <h2 id="inline">ترکیب جملات فارسی با نویسه های چپ به راست مثل اعداد و کلمات انگلیسی در داخل صفحه فارسی</h2>
+
+        <h3 id="inlineNumber">استفاده از عدد در متن
+            <br> برای اعداد میتوانید از <a href="#uniFaNumber">یونیکد</a> نیز استفاده کنید مثلاً برای عدد فارسی
+            صفر به صورت <mark>&#1776;</mark> از <code dir="ltr">&amp;#1776;</code> بهره ببرید.
+        </h3>
+        <p>
+            مبلغ دوهزار و هفتصد و شصت و سه ممیز سی و پنج برابر است با ۲۷۶۳/۳۵ یا <span
+                style="font-family: Yekan;">2763.35</span> یا ريال
+        </p>
+        <table style="text-align: center;">
+            <tr>
+                <th>عدد</th>
+                <th>&#1776;</th>
+                <th>&#1777;</th>
+                <th>&#1778;</th>
+                <th>&#1779;</th>
+                <th>&#1780;</th>
+                <th>&#1781;</th>
+                <th>&#1782;</th>
+                <th>&#1783;</th>
+                <th>&#1784;</th>
+                <th>&#1785;</th>
+            </tr>
+            <tr dir="ltr">
+                <th class="tooltip"><span data-tooltip="برای رونوشت در حافظه
+                    روی هر کلید
+                    بزنید" data-tooltip-position="left" class="circle">&#33;</span>یونیکد</th>
+                <td><button onclick="copyToClipboard('#c0')"><code id="c0">&amp;#1776;</code></button></td>
+                <td><button onclick="copyToClipboard('#c1')"><code id="c1">&amp;#1777;</code></button></td>
+                <td><button onclick="copyToClipboard('#c2')"><code id="c2">&amp;#1778;</code></button></td>
+                <td><button onclick="copyToClipboard('#c3')"><code id="c3">&amp;#1779;</code></button></td>
+                <td><button onclick="copyToClipboard('#c4')"><code id="c4">&amp;#1780;</code></button></td>
+                <td><button onclick="copyToClipboard('#c5')"><code id="c5">&amp;#1781;</code></button></td>
+                <td><button onclick="copyToClipboard('#c6')"><code id="c6">&amp;#1782;</code></button></td>
+                <td><button onclick="copyToClipboard('#c7')"><code id="c7">&amp;#1783;</code></button></td>
+                <td><button onclick="copyToClipboard('#c8')"><code id="c8">&amp;#1784;</code></button></td>
+                <td><button onclick="copyToClipboard('#c9')"><code id="c9">&amp;#1785;</code></button></td>
+            </tr>
+        </table>
+        <p>یخچال پارس:</p>
+        <p><s>۷۷۵/۰۰۰ ريال بود</s><sup dir="ltr">strikethrough tag <code>&lt;s&gt;</code></sup></p>
+        <p><del>۷۷۵/۰۰۰ ريال بود</del><sup dir="ltr">delete tag <code>&lt;del&gt;</code></sup></p>
+        <p>حالا فقط ۴۴۵/۰۰۰ريال</p>
+        <p><ins>حالا فقط ۴۴۵/۰۰۰ريال</ins><sup dir="ltr">insert tag <code>&lt;ins&gt;</code></sup></p>
+        <hr>
+
+        <h3 id="inlineFaEn">فارسی و انگلیسی در یک خط</h3>
+        <p>انگلیسیها برای کلمه واجب الوجود از Aseity استفاده میکنند.</p>
+        <p dir="ltr">The title is <cite dir="rtl">مدخلی به <span dir="ltr">C++</span></cite> in Arabic.</p>
+        <p>ما پنج بار کلمه «<span dir="ltr" lang="en">International activities!</span>&rlm;»‎ را در صفحه یافتیم.</p>
+        <p>برای اطمینان از اینکه مرورگرهای قدیمی هم میتوانند جملاتی که مجموع کلمات فارسی (راست به چپ) و عدد یا کلماتی از
+            زبانهایی با سمت چپ به راست
+            بدرستی نمایش دهند، دقیقاً بعد از وارد کردن کلمات و نویسه های مخالف جهت اصلی صفحه از <code translate="no"
+                dir="ltr"> &amp;rlm;</code> برای صفحات فارسی و از <code translate="no" dir="ltr"> &amp;lrm;</code> برای
+            صفحاتی که برچسب <code>dir</code> برای <code>html</code> چپ به راست
+            تعیین
+            شده است استفاده کنید</p>
+
+        <hr>
+
+        <h3 id="inlineChng">استفاده از <code dir="ltr">dir="ltr"</code> برای تغییر سمت صفحه برعکس آنچه در
+            <code>&lt;html&gt;</code> در ابتدای صفحه
+            تعریف شده است.
+        </h3>
+        <blockquote dir="ltr" lang="en" cite="http://Romeo.and.Juliet">But, soft! What light through yonder window
+            breaks? It is the east, and Juliet is the sun.</blockquote>
+        <br>
+        <hr>
+
+        <h3 id="unknownDir">اگر سمت و جهت متن ورودی را نمیدانید از <code dir="ltr">dir="auto"</code> استفاده کرده و اگر
+            برچسبی وجود نداشت از
+            برچسب
+            <code>&lt;bdi&gt;</code> استفاده کنید.
+        </h3>
+        <header>بالاترین رتبه های<br>غذاخوری‌ها</header>
+        <p><bdi>دربند</bdi> - &#1781; نظر</p>
+        <div><img src="img/ui/5-stars.png" alt="5 ستاره"></div>
+        <p><bdi>Aroma</bdi> - &#1778; نظر</p>
+        <div><img src="img/ui/5-stars.png" alt="5 ستاره"></div>
+        <p><bdi>روم Roma</bdi> - &#1779; نظر </p>
+        <div><img src="img/ui/5-stars.png" alt="5 ستاره"></div>
+
+        <h4>در حالیکه بدون <code>&lt;bdi&gt;</code> در صفحه ای با پایه راست به چپ اینگونه نشان میدهد. </h4>
+        <header>بالاترین رتبه های<br>غذاخوری‌ها</header>
+        <p>دربند - &#1781; نظر</p>
+        <div><img src="img/ui/5-stars.png" alt="5 ستاره"></div>
+        <p>Aroma - &#1778; نظر</p>
+        <div><img src="img/ui/5-stars.png" alt="5 ستاره"></div>
+        <p>روم Roma - &#1779; نظر </p>
+        <div><img src="img/ui/5-stars.png" alt="5 ستاره"></div>
+        <hr>
+
+        <h3 id="bdi">استفاده از برچسب <code>&lt;bdi&gt;</code> برای تغییر سمت صفحه.</h3>
+        <bdi>سلام حالتون؟</bdi>
+        <br>
+        <bdi>Howdy?</bdi>
+        <hr>
+
+
+        <h3 id="chat">خصوصیات اچ‌تی‌ام‌ال5 مثال زیر را در رابطه با یک جلسه گپ ارائه کرده است. به برچسبها خصوصاً <code
+                dir="ltr">dir="auto"</code> و <code>&lt;bdi&gt;</code> توجه
+            کنید:</h3>
+        <figure class="example" dir="auto">
+            <code>&lt;p dir="auto" class="u1"&gt;&lt;bdi&gt;S&lt;/bdi&gt;: &lt;span class="msg"&gt;How do you write "What's your name?" in Arabic?&lt;/span&gt;&lt;/p&gt;<br>
+        &lt;p dir="auto" class="u2"&gt;&lt;bdi&gt;T&lt;/bdi&gt;: &lt;span class="msg"&gt; ما اسمك؟&lt;/span&gt;&lt;/p&gt;<br>
+        &lt;p dir="auto" class="u1"&gt;&lt;bdi&gt;S&lt;/bdi&gt;: &lt;span class="msg"&gt;Thanks.&lt;/span&gt;&lt;/p&gt;<br>
+        &lt;p dir="auto" class="u2"&gt;&lt;bdi&gt;T&lt;/bdi&gt;: &lt;span class="msg"&gt;That's written "شكرًا".&lt;/span&gt;&lt;/p&gt;<br>
+        &lt;p dir="auto" class="u2"&gt;&lt;bdi&gt;T&lt;/bdi&gt;: &lt;span class="msg"&gt;Do you know how to write "Please"?&lt;/span&gt;&lt;/p&gt;<br>
+        &lt;p dir="auto" class="u1"&gt;&lt;bdi&gt;S&lt;/bdi&gt;: &lt;span class="msg"&gt;"من فضلك", right?&lt;/span&gt;&lt;/p&gt;</code>
+        </figure>
+        <p>مرورگر تصویر زیر را نمایش میدهد:</p>
+        <figure>
+            <img class="shadow" src="./img/im.png" alt="Picture of output">
+            <br>
+            <figcaption>تصویری از صفحه گپ و گفتگو دونفره</figcaption>
+            <div class="demolink"><a href="https://www.w3.org/International/questions/qa-html-dir-data/examples/auto"
+                    target="_blank">اینجا در مرورگر خود امتحان کنید</a></div>
+        </figure>
+
+        <div> <a href="#" class="icon icon-after icon-goLeft">برو اول صفحه </a></div>
+
+        <hr class="headBorder">
+
+        <h3 id="bdo">استفاده از برچسب <code>&lt;bdo&gt;</code> برای تغییر سمت صفحه. نکته: این برچسب حتما باید با
+            <code>dir</code> که
+            با <code>rtl</code> یا <code>ltr</code> آمده استفاده شود و نمیتواند ارزش آن برابر <code>auto</code> باشد.
+            بسیار
+            به ندرت استفاده میشود.
+        </h3>
+        <bdo dir="rtl">سلام حالتون؟</bdo>
+        <br>
+        <bdo dir="ltr">Howdy?</bdo>
+        <p dir="ltr">In the phrase, "<span dir="rtl">فعالیتهای بین‌المللی, W3C</span>", the order of characters in
+            memory
+            is:</p>
+        <p dir="ltr"><bdo dir="ltr">فعالیتهای بین‌المللی, W3C</bdo></p>
+        <hr>
+
+        <h3 id="equation">نوشتن معادله ریاضی به ترتیب با استفاده از <code>&lt;math&gt;</code>،
+            <code>&lt;code&gt;</code>، و
+            <code>&lt;var&gt;</code> به پشتیبانی مرورگرها برای هر یک توجه کنید.
+        </h3>
+        <MATH>&int;_آ_^ب^{ج(آ)<over>1+آ} دآ</MATH>
+        <br>
+        <code>&int;_آ_^ب^{ج(آ)<over>1+آ} دآ</code>
+        <br>
+        <var>&int;_آ_^ب^{ج(آ)<over>1+آ} دآ</var>
+        <hr>
+
+        <h2 id="supAddress">نشانی (آدرس)</h2>
+        <h3 id="subAddress">با استفاده از <code>&lt;address&gt;</code></h3>
+        <address>
+            <p>رایانامه:
+                <a href="mailto:email@gmail.co">email@gmail.co</a>
+
+            </p>
+            <p>
+                نشانی: آنطرفتر از جنب مسجد
+            </p>
+        </address>
+        <br>
+        <h3 id="hCard">با استفاده از <code>&lt;hCard&gt;</code>. که خصوصیات زیادی دارد.</h3>
+        <div class="vcard">
+            <span class="n">
+                <span class="honorific-prefix">آیت الله</span>
+                <span class="given-name">محمدتقی</span>
+                <span class="family-name">مصباح‌یزدی</span>
+                <span class="honorific-suffix">رحمه الله</span>
+            </span>
+
+            <a class="email" href="mailto:mesbah@example.com">رایانامه</a>
+            <a class="url" href="http://www.mesbahyazdi.ir/">پایگاه اطلاع‌رسانی</a>
+            <img class="photo" src="/img/مصباح.jpg" width="128" height="165" alt="آیت الله مصباح یزدی"
+                title="آیت الله مصباح یزدی" />
+        </div>
+        <br>
+        <div class="vcard">
+
+            <a class="url fn org" href="https://sazman.ir/">نام سازمان</a>
+
+        </div>
+        <hr>
+        <h2 id="outputSlider">خروجی <code>&lt;output&gt;</code>، <code>&lt;input&gt;</code>، در داخل برچسب
+            <code>&lt;form&gt;</code>
+        </h2>
+        <form oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+            <input type="range" id="a" value="50">
+            +<input type="number" id="b" value="25">
+            =<output name="x" for="a b"></output>
+        </form>
+        <p><strong>آگاهی:</strong>output در مرورگرهای Edge 12 یا قدیمی تر پشتیبانی نمیشود</p>
+
+        <hr>
+        <h2 id='formRequiredValidation'>راستی آزمایی گزینه های واجب و الزامی برگه اطلاعات بوسیله
+            مرورگر </h2>
+
+        <form action="/action_page.php" method="post">
+            <label for="title">عنوان:</label><br>
+            <input type="text" id="title" title="غیرفعال گردید" name="title" value="حکیم" disabled /><br>
+            <label for="fname">نام:</label><br>
+            <input type="text" name="fname" title="فقط حروف فارسی، گزینه واجب" maxlength="20" pattern="^[؀-ۿ]+$"
+                oninvalid="this.setCustomValidity('لطفاَ اطلاعات مورد نیاز را وارد کنید!')" required /><br>
+            <label for="lname">نام خانوادگی:</label><br>
+            <input type="text" name="lname" title="فقط حروف فارسی، گزینه واجب" maxlength="20" pattern="^[؀-ۿ]+$"
+                oninvalid="this.setCustomValidity('لطفاَ اطلاعات مورد نیاز را وارد کنید!')" required /><br>
+            <label for="mobile">شماره همراه:</label><br>
+            <input dir="ltr" type="tel" name="mobile" id="mobile"
+                title=" کد کشور بعلاوه شماره همراه که با خط فاصله از هم جدا شدند" min="11" max="20"
+                placeholder="۰۰۹۸۹۱۲۳۴۵۶۷۸۹" oninvalid="this.setCustomValidity('لطفاَ اطلاعات مورد نیاز را وارد کنید!')"
+                required /><br>
+            <label for="email">رایانامه:</label><br>
+            <input dir="ltr" type="email" name="email" id="email"
+                title="!رایانامه‌ای به این نشانی برای تایید ارسال میگردد" placeholder="Hossein.Mohammadi@mihanmail.ir"
+                size="45" required /><br>
+            <input type="submit" value="ثبت">
+        </form>
+        <p>اطلاع رسانی فارسی</p>
+
+        <hr>
+        <h2 id="table">جداول</h2>
+        <ul>
+            <li> <strong>استفاده از برچسبهای خاص اختیاری، برای بخش بندی یک جدول طولانی و بلند یا برای اعمال قالبهای
+                    مختلف</strong>:</li>
+            <ul>
+                <li>میتوانید برای تقسیم بندی قسمت بدنه جدول از برچسب <code>&lt;tbody&gt;</code> استفاده کنید. با اینکار
+                    قسمتهای بعدی در
+                    صفحات بعد دیگر عنوان سرخط ستونها که در ردیف اول آمده را همراه نخواهد داشت.</li>
+                <li>میتوانید برای جدا کردن سرخط (فقط سرخط افقی بعبارتی اولین ردیف) جدول از برچسب
+                    <code>&lt;thead&gt;</code>
+                    استفاده کنید.
+                </li>
+                <li>قسمت پایین و (زیرنویس/جمع کل و غیره) یک جدول را نیز میتواند با برچسب <code>&lt;tfoot&gt;</code>
+                    تقسیم‌بندی
+                    کنید.</li>
+                <li>برای تعریف عنوان ردیف یا ستون میتوانید بجای برچسب <code>&lt;td&gt;</code> از برچسب
+                    <code>&lt;th&gt;</code> استفاده کنید. با اینکار معنی و قالب بندی این قسمتها را میتوانید مدیریت کنید.
+                </li>
+                <ul>
+                    <li dir="auto">برای عنوان <b>سرستونها</b> از خصوصیت <code>scope</code> با مقدار
+                        <code>col</code> در داخل <code>&lt;th&gt;</code>استفاده کنید. مثال:
+                        <bdi><span style="color: brown">&lt;th</span><span style="color: red"> scope</span>=<span
+                                style="color: blue">"col"
+                            </span><span style="color: brown">&gt;</span></bdi>
+                    </li>
+                    <li dir="auto">برای عنوان <b>سرردیفها</b> از خصوصیت <code>scope</code> با مقدار
+                        <code>row</code> در داخل <code>&lt;th&gt;</code>استفاده کنید. مثال:
+                        <bdi><span style="color: brown">&lt;th</span><span style="color: red"> scope</span>=<span
+                                style="color: blue">"row"
+                            </span><span style="color: brown">&gt;</span></bdi>
+                    </li>
+                </ul>
+            </ul>
+            <li><strong>ادغام و ترکیب خانه های کنار هم یا بالای یکدیگر</strong>:</li>
+            <ul>
+                <li dir="auto">برای ادغام و ترکیب خانه‌های در یک <b>ردیف</b> از خصوصیت <code>rowspan</code> با مقدار
+                    ارزشی
+                    برابر با
+                    تعداد خانه
+                    ها استفاده کنید. مثلاً برای ترکیب سه خانه کنار هم از برچسب
+                    <bdi><span style="color: brown">&lt;td</span><span style="color: red"> rowspan</span><span
+                            style="color: blue">="3"
+                        </span><span style="color: brown">&gt;</span></bdi>
+                </li>
+                <li dir="auto">برای ادغام و ترکیب خانه‌های در یک <b>ستون</b> از خصوصیت <code>colspan</code> با مقدار
+                    ارزشی
+                    برابر با
+                    تعداد خانه
+                    ها استفاده کنید. مثلاً برای ترکیب دو خانه عمودی مجاور هم از برچسب
+                    <bdi><span style="color: brown">&lt;td</span><span style="color: red"> colspan</span><span
+                            style="color: blue">="2"
+                        </span><span style="color: brown">&gt;</span></bdi>
+                </li>
+            </ul>
+            <li><strong>همیشه از css برای قالببندی و زیباسازی یک جدول بهره ببرید.</strong></li>
+        </ul>
+        <table>
+            <thead>
+                <tr>
+                    <th scope="col">ردیف</th>
+                    <th scope="col">نام شرکت</th>
+                    <th scope="col">تعداد محموله ها برای حمل</th>
+                    <th scope="col">کار بعدی</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>اسپید</td>
+                    <td>14</td>
+                    <td>محموله‌های بسته‌بندی</td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>حاج حسین و پسران</td>
+                    <td>2</td>
+                    <td>ارسال برگه‌فروش</td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>فروشگاه دوچرخه عباسی</td>
+                    <td>3</td>
+                    <td>ارسال برگه‌فروش</td>
+                </tr>
+                <tr>
+                    <th scope="row">4</th>
+                    <td>خانم خدیجه نظامی</td>
+                    <td rowspan="2">4</td>
+                    <td>ارسال</td>
+                </tr>
+                <tr>
+                    <th scope="row">5</th>
+                    <td>اجاره محل کنگره</td>
+                    <td>ارسال</td>
+                </tr>
+                <tr>
+                    <th scope="row">6</th>
+                    <td colspan="2">باشگاه پوریای‌ولی</td>
+                    <td>ورود دستور خرید</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th>#</th>
+                    <td>جمع کل:</td>
+                    <td>22 میلیون ريال</td>
+                    <td>14/5 میلیون يال</td>
+                </tr>
+            </tfoot>
+        </table>
+        <hr>
+
+
+        <!--آغاز یونیکد-->
+
+        <table style="text-align: center; float: right; ">
+            <tr class="کلمات">
+                <th>کلمات و نمادها</th>
+                <td>&#65021;</td>
+                <td>&#65010;</td>
+                <td>&#65019;</td>
+                <td>&#65011;</td>
+                <td>&#65012;</td>
+                <td>&#65014;</td>
+                <td>&#65017;</td>
+                <td>&#65016;</td>
+                <td>&#65009;</td>
+                <td>&#65008;</td>
+            </tr>
+            <tr dir="ltr">
+                <th class="tooltip"><span data-tooltip="برای رونوشت در حافظه
+                    روی هر کلید
+                    بزنید" data-tooltip-position="left" class="circle">&#33;</span>یونیکد</th>
+                <td><button onclick="copyToClipboard('#a0')"><code id="a0">&amp;#65021;</code></button></td>
+                <td><button onclick="copyToClipboard('#a1')"><code id="a1">&amp;#65010;</code></button></td>
+                <td><button onclick="copyToClipboard('#a2')"><code id="a2">&amp;#65019;</code></button></td>
+                <td><button onclick="copyToClipboard('#a3')"><code id="a3">&amp;#65011;</code></button></td>
+                <td><button onclick="copyToClipboard('#a4')"><code id="a4">&amp;#65012;</code></button></td>
+                <td><button onclick="copyToClipboard('#a5')"><code id="a5">&amp;#65014;</code></button></td>
+                <td><button onclick="copyToClipboard('#a6')"><code id="a6">&amp;#65017;</code></button></td>
+                <td><button onclick="copyToClipboard('#a7')"><code id="a7">&amp;#65016;</code></button></td>
+                <td><button onclick="copyToClipboard('#a8')"><code id="a8">&amp;#65009;</code></button></td>
+                <td><button onclick="copyToClipboard('#a9')"><code id="a9">&amp;#65008;</code></button></td>
+            </tr>
+            <tr>
+                <td colspan="11"></td>
+            </tr>
+            <tr class="کلمات">
+                <th>کلمات و نمادها</th>
+                <td>&#64831;</td>
+                <td>&#64830;</td>
+                <td>&#64434;</td>
+                <td>&#64435;</td>
+                <td>&#64436;</td>
+                <td>&#64437;</td>
+                <td>&#64438;</td>
+                <td>&#64439;</td>
+                <td>&#64440;</td>
+                <td>&#64441;</td>
+            </tr>
+            <tr dir="ltr">
+                <th class="tooltip"><span data-tooltip="برای رونوشت در حافظه
+                    روی هر کلید
+                    بزنید" data-tooltip-position="left" class="circle">&#33;</span>یونیکد</th>
+                <td><button onclick="copyToClipboard('#a10')"><code id="a10">&amp;#64831;</code></button></td>
+                <td><button onclick="copyToClipboard('#a11')"><code id="a11">&amp;#64830;</code></button></td>
+                <td><button onclick="copyToClipboard('#a12')"><code id="a12">&amp;#64434;</code></button></td>
+                <td><button onclick="copyToClipboard('#a13')"><code id="a13">&amp;#64435;</code></button></td>
+                <td><button onclick="copyToClipboard('#a14')"><code id="a14">&amp;#64436;</code></button></td>
+                <td><button onclick="copyToClipboard('#a15')"><code id="a15">&amp;#64437;</code></button></td>
+                <td><button onclick="copyToClipboard('#a16')"><code id="a16">&amp;#64438;</code></button></td>
+                <td><button onclick="copyToClipboard('#a17')"><code id="a17">&amp;#64439;</code></button></td>
+                <td><button onclick="copyToClipboard('#a18')"><code id="a18">&amp;#64440;</code></button></td>
+                <td><button onclick="copyToClipboard('#a19')"><code id="a19">&amp;#64441;</code></button></td>
+            </tr>
+            <tr>
+                <td colspan="11"></td>
+            </tr>
+            <tr class="کلمات">
+                <th>کلمات و نمادها</th>
+                <td>&#64442;</td>
+                <td>&#64443;</td>
+                <td>&#64444;</td>
+                <td>&#64445;</td>
+                <td>&#64446;</td>
+                <td>&#64447;</td>
+                <td>&#64448;</td>
+                <td>&#64449;</td>
+                <td>&#65020;</td>
+                <td>&#1557;</td>
+            </tr>
+            <tr dir="ltr">
+                <th class="tooltip"><span data-tooltip="برای رونوشت در حافظه
+                    روی هر کلید
+                    بزنید" data-tooltip-position="left" class="circle">&#33;</span>یونیکد</th>
+                <td><button onclick="copyToClipboard('#a20')"><code id="a20">&amp;#64442;</code></button></td>
+                <td><button onclick="copyToClipboard('#a21')"><code id="a21">&amp;#64443;</code></button></td>
+                <td><button onclick="copyToClipboard('#a22')"><code id="a22">&amp;#64444;</code></button></td>
+                <td><button onclick="copyToClipboard('#a23')"><code id="a23">&amp;#64445;</code></button></td>
+                <td><button onclick="copyToClipboard('#a24')"><code id="a24">&amp;#64446;</code></button></td>
+                <td><button onclick="copyToClipboard('#a25')"><code id="a25">&amp;#64447;</code></button></td>
+                <td><button onclick="copyToClipboard('#a26')"><code id="a26">&amp;#64448;</code></button></td>
+                <td><button onclick="copyToClipboard('#a27')"><code id="a27">&amp;#64449;</code></button></td>
+                <td><button onclick="copyToClipboard('#a28')"><code id="a28">&amp;#65020;</code></button></td>
+                <td><button onclick="copyToClipboard('#a29')"><code id="a29">&amp;#1557;</code></button></td>
+            </tr>
+            <tr>
+                <td colspan="11"></td>
+            </tr>
+            <tr class="کلمات">
+                <th>کلمات و نمادها</th>
+                <td>
+                    <ruby class="جدول">
+                        &#1562; <rt>کسره کوچک</rt>
+                    </ruby>
+                </td>
+                <td>
+                    <ruby class="جدول">
+                        &#1561; <rt>ضمه کوچک</rt>
+                    </ruby>
+                </td>
+                <td>
+                    <ruby class="جدول">
+                        &#1560; <rt>فتحه کوچک</rt>
+                    </ruby>
+                </td>
+                <td>&#1616;</td>
+                <td>&#1615;</td>
+                <td>&#1614;</td>
+                <td>&#1617;</td>
+                <td>&#1613;</td>
+                <td>&#1612;</td>
+                <td>&#1611;</td>
+            </tr>
+            <tr dir="ltr">
+                <th class="tooltip"><span data-tooltip="برای رونوشت در حافظه
+                    روی هر کلید
+                    بزنید" data-tooltip-position="left" class="circle">&#33;</span>یونیکد</th>
+                <td><button onclick="copyToClipboard('#a30')"><code id="a30">&amp;#1562;</code></button></td>
+                <td><button onclick="copyToClipboard('#a31')"><code id="a31">&amp;#1561;</code></button></td>
+                <td><button onclick="copyToClipboard('#a32')"><code id="a32">&amp;#1560;</code></button></td>
+                <td><button onclick="copyToClipboard('#a33')"><code id="a33">&amp;#1616;</code></button></td>
+                <td><button onclick="copyToClipboard('#a34')"><code id="a34">&amp;#1615;</code></button></td>
+                <td><button onclick="copyToClipboard('#a35')"><code id="a35">&amp;#1614;</code></button></td>
+                <td><button onclick="copyToClipboard('#a36')"><code id="a36">&amp;#1617;</code></button></td>
+                <td><button onclick="copyToClipboard('#a37')"><code id="a37">&amp;#1613;</code></button></td>
+                <td><button onclick="copyToClipboard('#a38')"><code id="a38">&amp;#1612;</code></button></td>
+                <td><button onclick="copyToClipboard('#a39')"><code id="a39">&amp;#1611;</code></button></td>
+            </tr>
+            <tr>
+                <td colspan="11"></td>
+            </tr>
+            <tr class="کلمات">
+                <th>کلمات و نمادها</th>
+                <td>&#1750;</td>
+                <td>&#1751;</td>
+                <td>&#1752;</td>
+                <td>&#1753;</td>
+                <td>&#1754;</td>
+                <td>&#1755;</td>
+                <td>&#1756;</td>
+                <td>&#1757;</td>
+                <td>&#1758;</td>
+                <td>&#1759;</td>
+            </tr>
+            <tr dir="ltr">
+                <th class="tooltip"><span data-tooltip="برای رونوشت در حافظه
+                    روی هر کلید
+                    بزنید" data-tooltip-position="left" class="circle">&#33;</span>یونیکد</th>
+                <td><button onclick="copyToClipboard('#a40')"><code id="a40">&amp;#1750;</code></button></td>
+                <td><button onclick="copyToClipboard('#a41')"><code id="a41">&amp;#1751;</code></button></td>
+                <td><button onclick="copyToClipboard('#a42')"><code id="a42">&amp;#1752;</code></button></td>
+                <td><button onclick="copyToClipboard('#a43')"><code id="a43">&amp;#1753;</code></button></td>
+                <td><button onclick="copyToClipboard('#a44')"><code id="a44">&amp;#1754;</code></button></td>
+                <td><button onclick="copyToClipboard('#a45')"><code id="a45">&amp;#1755;</code></button></td>
+                <td><button onclick="copyToClipboard('#a46')"><code id="a46">&amp;#1756;</code></button></td>
+                <td><button onclick="copyToClipboard('#a47')"><code id="a47">&amp;#1757;</code></button></td>
+                <td><button onclick="copyToClipboard('#a48')"><code id="a48">&amp;#1758;</code></button></td>
+                <td><button onclick="copyToClipboard('#a49')"><code id="a49">&amp;#1759;</code></button></td>
+            </tr>
+            <tr>
+                <td colspan="11"></td>
+            </tr>
+            <tr class="کلمات">
+                <th>کلمات و نمادها</th>
+                <td>&#1760;</td>
+                <td>&#1761;</td>
+                <td>&#1762;</td>
+                <td>&#1763;</td>
+                <td>&#1764;</td>
+                <td>&#1765;</td>
+                <td>&#1766;</td>
+                <td>&#1767;</td>
+                <td>&#1768;</td>
+                <td>&#1769;</td>
+            </tr>
+            <tr dir="ltr">
+                <th class="tooltip"><span data-tooltip="برای رونوشت در حافظه
+                    روی هر کلید
+                    بزنید" data-tooltip-position="left" class="circle">&#33;</span>یونیکد</th>
+                <td><button onclick="copyToClipboard('#a50')"><code id="a50">&amp;#1760;</code></button></td>
+                <td><button onclick="copyToClipboard('#a51')"><code id="a51">&amp;#1761;</code></button></td>
+                <td><button onclick="copyToClipboard('#a52')"><code id="a52">&amp;#1762;</code></button></td>
+                <td><button onclick="copyToClipboard('#a53')"><code id="a53">&amp;#1763;</code></button></td>
+                <td><button onclick="copyToClipboard('#a54')"><code id="a54">&amp;#1764;</code></button></td>
+                <td><button onclick="copyToClipboard('#a55')"><code id="a55">&amp;#1765;</code></button></td>
+                <td><button onclick="copyToClipboard('#a56')"><code id="a56">&amp;#1766;</code></button></td>
+                <td><button onclick="copyToClipboard('#a57')"><code id="a57">&amp;#1767;</code></button></td>
+                <td><button onclick="copyToClipboard('#a58')"><code id="a58">&amp;#1768;</code></button></td>
+                <td><button onclick="copyToClipboard('#a59')"><code id="a59">&amp;#1769;</code></button></td>
+            </tr>
+            <td colspan="11"></td>
+            </tr>
+            <tr class="کلمات">
+                <th>کلمات و نمادها</th>
+                <td>&#1770;</td>
+                <td>&#1771;</td>
+                <td>&#1772;</td>
+                <td>&#1773;</td>
+                <td>&#1649;</td>
+                <td>&#1648;</td>
+                <td>&#1642;</td>
+                <td>&#1643;</td>
+                <td>&#1644;</td>
+                <td>&#1645;</td>
+            </tr>
+            <tr dir="ltr">
+                <th class="tooltip"><span data-tooltip="برای رونوشت در حافظه
+                روی هر کلید
+                بزنید" data-tooltip-position="left" class="circle">&#33;</span>یونیکد</th>
+                <td><button onclick="copyToClipboard('#a60')"><code id="a60">&amp;#1770;</code></button></td>
+                <td><button onclick="copyToClipboard('#a61')"><code id="a61">&amp;#1771;</code></button></td>
+                <td><button onclick="copyToClipboard('#a62')"><code id="a62">&amp;#1772;</code></button></td>
+                <td><button onclick="copyToClipboard('#a63')"><code id="a63">&amp;#1773;</code></button></td>
+                <td><button onclick="copyToClipboard('#a64')"><code id="a64">&amp;#1649;</code></button></td>
+                <td><button onclick="copyToClipboard('#a65')"><code id="a65">&amp;#1648;</code></button></td>
+                <td><button onclick="copyToClipboard('#a66')"><code id="a66">&amp;#1642;</code></button></td>
+                <td><button onclick="copyToClipboard('#a67')"><code id="a67">&amp;#1643;</code></button></td>
+                <td><button onclick="copyToClipboard('#a68')"><code id="a68">&amp;#1644;</code></button></td>
+                <td><button onclick="copyToClipboard('#a69')"><code id="a69">&amp;#1645;</code></button></td>
+            </tr>
+        </table>
+
+    </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script>
+        function copyToClipboard(element) {
+            var $temp = $("<input>");
+            $("body").append($temp);
+            $temp.val($(element).text()).select();
+            document.execCommand("copy");
+            $temp.remove();
+        }
+    </script>
+
+
+</body>
+
+</html>

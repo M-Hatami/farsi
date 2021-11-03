@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="fa">
+
+<head>
+    <style>
+        @font-face {
+            font-family: "Vazir Code";
+            src: url('fnt/monospaced/Vazir-Code.eot');
+            src: url('fnt/monospaced/Vazir-Code.eot?#iefix') format('embedded-opentype'),
+                url('fnt/monospaced/Vazir-Code.woff') format('woff'),
+                url('fnt/monospaced/Vazir-Code.ttf') format('truetype');
+            font-weight: normal;
+        }
+
+        @font-face {
+            font-family: "Vazir Code Hack";
+            src: url('fnt/monospaced/Vazir-Code-Hack.eot');
+            src: url('fnt/monospaced/Vazir-Code-Hack.eot?#iefix') format('embedded-opentype'),
+                url('fnt/monospaced/Vazir-Code-Hack.woff') format('woff'),
+                url('fnt/monospaced/Vazir-Code-Hack.ttf') format('truetype');
+            font-weight: normal;
+        }
+
+        @font-face {
+            font-family: Yekan;
+            src: url(fnt/Yekan.woff);
+            src: url(fnt/Yekan.eot?#iefix) format(“embedded-opentype”),
+                url(fonts/Yekan.woff) format(“woff”),
+                url(fonts/Yekan.ttf) format(“truetype”),
+                url(fonts/Yekan.svg#BYekan) format(“svg”);
+            font-weight: normal;
+        }
+
+        * {
+            font-family: Yekan, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+                Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+        }
+
+        /* اعداد فهرست ترتیبی را فارسی میکند */
+        ol {
+            list-style-type: persian;
+            list-style-type: -moz-persian;
+        }
+
+
+        /* استفاده از یونیکد خط میخی برای استفاده در فهرست غیرترتیبی*/
+        ul li {
+            list-style-type: "\103D3\00a0 ";
+            /* یک حرف از خط میخی بعلاوه یک فاصله */
+        }
+
+        /* نرم افزارهای متن خوان وقتی به فهرست غیرترتیبی که نشانه اش را نمیشناسند مشکل پیدا میکند، با افزودن یک نشانه بدون طول آنها میفهمند باید مکث کنند */
+        ul li::before {
+            content: "\200B";
+            /* یونیکد "فاصله بدون طول عرض" برای حل مشکل متن خوانها */
+        }
+
+        /*-------------- تعریف قالب نشانه های فهرست بندی با استفاده از ابجد -------------*/
+        @counter-style abgad {
+            system: alphabetic;
+            symbols: ا ب ج د ه و ز ح ط ی ک ل م ن س ع ف ص ق ر ش ت ث خ ذ ض ظ غ گ چ پ ژ;
+            suffix: '. ';
+            speak-as: spell-out;
+        }
+
+        ol ol li {
+            list-style: abgad;
+        }
+
+        ol.abjad {
+            list-style: abgad;
+        }
+
+        /*قلم برای نشانه های ابجد استفاده شده در فهرستها */
+        ol li::marker,
+        ul li::marker {
+            font-family: "Vazir Code", "Vazir Code Hack", "Courier New";
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        /*------------------------------------------------*/
+
+        /* or use the shortcut "list-style": */
+        ol.shortcut {
+            list-style: persian;
+            list-style-type: -moz-persian;
+
+        }
+
+
+        .container {
+            column-count: 3;
+        }
+
+        label {
+            display: block;
+        }
+
+        input {
+            margin: .4rem;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+        <h1>قالب بندی انواع فهرست فارسی در طراحی تارنما</h1>
+        <details>
+            <summary>اطلاعات بیشتر</summary>
+            <p>html lists in Farsi/Persian/Arabic: you can use this template to find out how to create your
+                Farsi/Arabic/Persian lists using the current HTML tags, CSS rules and JavaScript
+                standards</p>
+            <p>
+                در این صفحه با انواع فهرستهای فارسی ترتیبی، غیرترتیبی، شخصی سازی شده با حروف ابجد، و حرف میخی و همچنین
+                ترکیبی از
+                آنها آشنا میشوید. شما میتوانید به متن برنامه صفحه مراجعه کنید. تمام اچ.تی.ام.ای، سی.اس.اس و جاوا.اسکریپت
+                مورد نیاز داخل همین یک صفحه هستند.</p>
+        </details>
+    </header>
+    <hr>
+
+    <h2>فهرست ترکیبی ترتیبی فارسی با تعریف شده ابجد برای مرتبه دوم فهرست </h2>
+    <ol>
+        <li>ابن هیثم</li>
+        <ol>
+            <li>اولین مخترع دوربین عکاسی در دنیا</li>
+            <li>کاشف محاسبه سرعت صوت برای اولین بار در دنیا</li>
+            <li>اندازه گیری سرعت نور دور کره زمین برای اولین بار در دنیا</li>
+        </ol>
+        <li>مریم اسطرلابی (منجم)</li>
+        <li>فاطمه مجریطی (منجم)</li>
+        <li> (امُ الخیر) رابعه عدویه</li>
+        <li>بدیع‌الزمان جزری (اولین مخترع ساعت در دنیا)</li>
+    </ol>
+    <p><em>نکته:</em> وقتی از حروف مثل حروف ابجد برای عناصر فهرست استفاده میکنید، حتماً از قلمهایی که عرض تمامی حروف
+        آنها به یک اندازه
+        هستند و اصطلاحاً به آنها <mark>قلم
+            <em><strong>"تک
+                    فاصله"</strong></em></mark> گفته
+        میشود
+        استفاده کنید. با اینکار ظاهر فهرست حفظ شده و با تفاوت در عرض حروف، گزینه های فهرست بدترکیب و جابجا نمیشوند. </p>
+    <hr>
+
+    <h2>فهرست استفاده کامل از ابجد:</h2>
+    <ol class="abjad">
+        <li>سلام ابجد</li>
+        <ol>
+            <li>اول</li>
+            <li>دوم</li>
+            <li>سوم</li>
+        </ol>
+        <li>هستی</li>
+        <ol>
+            <li>ابجد</li>
+            <li>هوز</li>
+            <li>حطی</li>
+            <li>کلم</li>
+        </ol>
+        <li>چه خبر؟</li>
+    </ol>
+
+    <hr>
+
+    <h2>فهرست ترکیبی ترتیبی فارسی با غیر ترتیبی که از نشانه خط میخی (با یونیکد U+103D3
+        ) استفاده میکند</h2>
+    <ol class="shortcut">
+        <li>مثل</li>
+        <ul>
+            <li>اول</li>
+            <li>دوم</li>
+            <li>سوم</li>
+        </ul>
+        <li>هم</li>
+        <li>نمیشود</li>
+        <li>که باشند</li>
+    </ol>
+
+    <hr>
+
+    <h2>فهرست غیرترتیبی</h2>
+    <ul>
+        <li>خواجه نصیرالدین طوسی</li>
+        <ul>
+            <li>بیش از ۱۸۴ عنوان کتاب</li>
+            <li>علوم اخلاق، منطق، فلسفه، کلام، ریاضیات و نجوم و طب و علوم طبیعی</li>
+            <li>تاسیس رصدخانه و کتابخانه‌ مراغه</li>
+            <li>در کتابخانه رصدخانه مراغه، انواع کتاب از زبان‌های چینی، مغولی، سنسکریت، آشوری و عربی به زبان فارسی ترجمه
+                شد </li>
+        </ul>
+        <li>ابوعلی سینا</li>
+        <li>محقق حلی</li>
+        <li>شیخ بهایی</li>
+        <li>امام خمینی</li>
+    </ul>
+
+    <hr>
+
+    <h3>فهرست تو در تو:</h3>
+    <ul>
+        <li>غذای اصلی</li>
+        <li>پیش غذا
+            <ul>
+                <li>نمک</li>
+                <li>نان</li>
+                <li>پیاز</li>
+                <li>ماست</li>
+            </ul>
+        </li>
+        <li>پس غذا</li>
+    </ul>
+    <hr>
+    <h2>استفاده از برچسب <code>&lt;dl&gt;</code> برای ساختن فهرست توضیحی یا <span dir="ltr">definition
+            list</span>. و
+        <code>&lt;ul&gt;</code> داخل <code>&lt;ul&gt;</code> دیگر برای ساخت فهرست تو در تو
+    </h2>
+    <dl>
+        <dt>قهوه</dt>
+        <dd>از دانه های میوه درخت قهوه است.</dd>
+        <dt>شیر</dt>
+        <dd>از لبنیات است و معمولا از گاو تهیه میشود.</dd>
+        <dt>نان</dt>
+        <dd>غذای کامل است که از گندم یا جو درست میشود.</dd>
+        <dt>عسل</dt>
+        <dd>مهمترین محصول زنبور عسل است که از شهد گیاهان بصورت معجزه آسایی میسازد.</dd>
+    </dl>
+    <hr>
+
+
+    <h2>فهرست تک گزینه‌ای: نوع قالب برای فهرست خود را انتخاب کنید:</h2>
+
+    <div class="container">
+
+        <label for="persian">
+            <input type="radio" id="persian" name="type" value="persian">persian
+        </label>
+
+        <label for="arabic-indic">
+            <input type="radio" id="arabic-indic" name="type" value="arabic-indic">arabic-indic
+        </label>
+
+        <label for="disc">
+            <input type="radio" id="disc" name="type" value="disc">disc
+        </label>
+
+        <label for="circle">
+            <input type="radio" id="circle" name="type" value="circle">circle
+        </label>
+
+        <label for="square">
+            <input type="radio" id="square" name="type" value="square">square
+        </label>
+
+        <label for="decimal">
+            <input type="radio" id="decimal" name="type" value="decimal">decimal
+        </label>
+
+        <label for="cjk-decimal">
+            <input type="radio" id="cjk-decimal" name="type" value="cjk-decimal">cjk-decimal
+        </label>
+
+        <label for="decimal-leading-zero">
+            <input type="radio" id="decimal-leading-zero" name="type" value="decimal-leading-zero">decimal-leading-zero
+        </label>
+
+        <label for="lower-roman">
+            <input type="radio" id="lower-roman" name="type" value="lower-roman">lower-roman
+        </label>
+
+        <label for="upper-roman">
+            <input type="radio" id="upper-roman" name="type" value="upper-roman">upper-roman
+        </label>
+
+        <label for="lower-greek">
+            <input type="radio" id="lower-greek" name="type" value="lower-greek">lower-greek
+        </label>
+
+        <label for="lower-alpha">
+            <input type="radio" id="lower-alpha" name="type" value="lower-alpha">lower-alpha, lower-latin
+        </label>
+
+        <label for="upper-alpha">
+            <input type="radio" id="upper-alpha" name="type" value="upper-alpha">upper-alpha, upper-latin
+        </label>
+    </div>
+
+</body>
+
+</html>

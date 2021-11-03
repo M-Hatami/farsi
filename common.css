@@ -1,0 +1,313 @@
+@font-face {
+  font-family: Yekan;
+  src: url(fnt/Yekan.woff2) format("woff2"),
+    url(fonts/Yekan.woff) format("woff"),
+    url(fonts/Yekan.ttf) format("truetype"),
+    url(fnt/Yekan.eot?#iefix) format("embedded-opentype"),
+    url(fonts/Yekan.svg#BYekan) format("svg");
+  font-weight: normal;
+  unicode-range: U+0600 –06FF;
+}
+
+@font-face {
+  font-family: "ufc00";
+  src: url("fnt/ufc00.woff") format("woff"),
+    url("fnt/ufc00.ttf") format("truetype"),
+    url("fnt/ufc00.eot?#iefix") format("embedded-opentype"),
+    url("fnt/ufc00.svg#webfont") format("svg");
+  unicode-range: U+FB50-FDFD;
+}
+
+@font-face {
+  font-family: "Vazir Code Hack";
+  src: url("fnt/monospaced/Vazir-Code-Hack.woff2") format("woff2"),
+    url("fnt/monospaced/Vazir-Code-Hack.woff") format("woff"),
+    url("fnt/monospaced/Vazir-Code-Hack.ttf") format("truetype"),
+    url("fnt/monospaced/Vazir-Code-Hack.eot?#iefix") format("embedded-opentype");
+  font-weight: normal;
+  unicode-range: U+0600 –06FF;
+}
+
+* {
+  font-family: Yekan, Tahoma, "Segoe UI", sans-serif, "Noto Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Apple Color Emoji";
+  color: #202124;
+}
+
+code,
+math,
+var {
+  font-family: "Vazir Code Hack", "Courier New", Courier, monospace;
+}
+
+/*-------------- Start of Flag of Islamic Republic of Iran ------------*/
+#flag,
+table #flag {
+  margin: 0;
+  min-width: 35px;
+  min-height: 30px;
+  text-align: center;
+  color: red;
+  border: 0.07em solid #888;
+  border-radius: 5%;
+  box-shadow: 0.02em 0.02em 0.02em 0.05em #888;
+}
+
+#flag td {
+  border: 1px solid transparent;
+  padding: 0;
+}
+#flag .first,
+#flag .first td {
+  background-color: #007d1b;
+  height: 0.3em;
+}
+
+#flag .firstBorder {
+  background-image: url(img/ui/SVG/Allah-o-Akbar-green.svg);
+  background-repeat: repeat-x;
+  background-color: #007d1b;
+  height: 0.14em;
+}
+
+#flag .middle,
+#flag .middle td {
+  padding: 0;
+  margin: 0;
+  font-size: 0.7em;
+  line-height: 0.24em;
+  height: 0.7em;
+}
+
+#flag .lastBorder,
+#flag .lastBorder td {
+  background-image: url(img/ui/SVG/Allah-o-Akbar-red.svg);
+  background-repeat: repeat-x;
+  background-color: red;
+  height: 0.14em;
+}
+
+#flag .last {
+  background-color: red;
+  height: 0.3em;
+}
+
+/*-------------- End design of Flag of Islamic Republic of Iran ------------*/
+
+code {
+  color: blue;
+}
+
+table {
+  margin: 20px auto;
+  overflow-y: scroll;
+  position: static;
+  border-collapse: collapse;
+  border: 1px solid black;
+}
+
+thead th {
+  background: #88ccf1;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 100;
+  letter-spacing: 2px;
+}
+
+tr {
+  background: #f4f7f8;
+  margin-bottom: 5px;
+}
+
+th,
+td {
+  /*font-weight: 400;*/
+  padding: 10px;
+  white-space: nowrap;
+  border: 1px solid black;
+}
+
+.headBorder {
+  height: 2px;
+  border-width: 0;
+  color: gray;
+  background-color: gray;
+}
+
+kbd {
+  background-color: #eee;
+  border-radius: 3px;
+  border: 1px solid #b4b4b4;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2),
+    0 2px 0 0 rgba(255, 255, 255, 0.7) inset;
+  color: #333;
+  display: inline-block;
+  font-size: 0.85em;
+  font-weight: 700;
+  line-height: 1;
+  padding: 2px 4px;
+  white-space: nowrap;
+}
+
+code {
+  background-color: #eee;
+  border-radius: 3px;
+  padding: 0 3px;
+}
+
+ruby {
+  font-size: 1em;
+  display: inline-block;
+}
+
+.کلمات td {
+  font-family: "ufc00", serif;
+  font-size: 5em;
+}
+
+.جدول {
+  font-family: "ufc00", serif;
+  font-size: 1em;
+}
+
+ruby rt {
+  font-size: 0.2em;
+}
+
+.Unicode,
+.nowrap {
+  font-size: 1.5em;
+}
+
+/* ***********Tooltips************* */
+.circle {
+  color: #007d1b;
+  font-size: xx-small;
+  border: 1px solid #007d1b;
+  border-radius: 50%;
+  padding: 0 0.8em;
+}
+
+[data-tooltip] {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+}
+
+/* Tooltip styling */
+[data-tooltip]:before {
+  content: attr(data-tooltip);
+  display: none;
+  position: absolute;
+  background: rgb(235, 235, 235);
+  color: #000;
+  padding: 4px 8px;
+  font-size: 0.875rem;
+  line-height: 1.4;
+  min-width: 100px;
+  text-align: center;
+  border-radius: 4px;
+  box-shadow: #b8bdc1 2px 2px;
+}
+/* Dynamic horizontal centering */
+[data-tooltip-position="top"]:before,
+[data-tooltip-position="bottom"]:before {
+  left: 50%;
+  -ms-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+/* Dynamic vertical centering */
+[data-tooltip-position="right"]:before,
+[data-tooltip-position="left"]:before {
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+[data-tooltip-position="top"]:before {
+  bottom: 100%;
+  margin-bottom: 6px;
+}
+[data-tooltip-position="right"]:before {
+  left: 100%;
+  margin-left: 6px;
+}
+[data-tooltip-position="bottom"]:before {
+  top: 100%;
+  margin-top: 6px;
+}
+[data-tooltip-position="left"]:before {
+  right: 100%;
+  margin-right: 6px;
+}
+
+/* Tooltip arrow styling/placement */
+[data-tooltip]:after {
+  content: "";
+  display: none;
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+}
+/* Dynamic horizontal centering for the tooltip */
+[data-tooltip-position="top"]:after,
+[data-tooltip-position="bottom"]:after {
+  left: 50%;
+  margin-left: -6px;
+}
+/* Dynamic vertical centering for the tooltip */
+[data-tooltip-position="right"]:after,
+[data-tooltip-position="left"]:after {
+  top: 50%;
+  margin-top: -6px;
+}
+[data-tooltip-position="top"]:after {
+  bottom: 100%;
+  border-width: 6px 6px 0;
+  border-top-color: #000;
+}
+[data-tooltip-position="right"]:after {
+  left: 100%;
+  border-width: 6px 6px 6px 0;
+  border-right-color: #000;
+}
+[data-tooltip-position="bottom"]:after {
+  top: 100%;
+  border-width: 0 6px 6px;
+  border-bottom-color: #000;
+}
+[data-tooltip-position="left"]:after {
+  right: 100%;
+  border-width: 6px 0 6px 6px;
+  border-left-color: #000;
+}
+/* Show the tooltip when hovering */
+[data-tooltip]:hover:before,
+[data-tooltip]:hover:after {
+  display: block;
+  z-index: 50;
+}
+
+/* ***********ٍEnd of tooltip************* */
+
+/* ***********examples************* */
+
+.example {
+  margin-block-start: 0.25em;
+  margin-block-end: 0.25em;
+
+  background-color: #ffe;
+  border: 1px solid #ccc;
+  padding: 5px 10px 5px 15px;
+  border-radius: 5px;
+}
+
+/* Unicode Section */
+div {
+  display: block;
+}

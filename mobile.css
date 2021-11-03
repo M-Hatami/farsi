@@ -1,0 +1,29 @@
+/*  most of the styles can remain the same as they are inherited from main.css,
+    the elements can be moved around with floats, widths, heights and so on
+*/
+
+#wrapper {
+  width: 90%;
+}
+
+#content {
+  width: 100%;
+}
+
+#sidebar-left {
+  width: 100%;
+  clear: both;
+
+  /* Additional styling for our new layout */
+  border-top: 1px solid #ccc;
+  margin-top: 20px;
+}
+
+#sidebar-right {
+  width: 100%;
+  clear: both;
+
+  /* Additional styling for our new layout */
+  border-top: 1px solid #ccc;
+  margin-top: 20px;
+}

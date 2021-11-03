@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="fa">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>یادآور</title>
+    <meta name="theme-color" content="#129C10" />
+    <link href="img/ui/favicon.ico" type="image/x-icon" rel="icon">
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <style>
+        /* Universal Styles */
+        body {
+            margin: 0px;
+            background-color: whitesmoke;
+            font-family: 'Rock Salt', cursive;
+            text-align: center;
+        }
+
+        .secondary-background {
+            background-color: snow;
+        }
+
+        .tagline {
+            font-family: 'Quicksand', sans-serif;
+            color: lightslategrey;
+            line-height: 125px;
+        }
+
+        /* Header */
+        h1 {
+            margin: 0;
+            background-color: steelblue;
+            line-height: 100px;
+            color: khaki;
+        }
+
+        h2 {
+            margin: 10px;
+        }
+
+        /* App Container */
+        .container {
+            border: 2px solid snow;
+            display: flex;
+        }
+
+        /* To Do Section */
+        .week {
+            display: inline-flex;
+            flex-grow: 3;
+            flex-direction: column;
+        }
+
+        .row {
+            min-height: 200px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .square {
+            width: 125px;
+            height: 125px;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .day.square {
+            background-color: steelblue;
+            border: 1px solid white;
+        }
+
+        .task.square {
+            background-color: khaki;
+            border: 1px solid white;
+        }
+
+        .task p {
+            font-family: 'Quicksand', sans-serif;
+            font-weight: 700;
+            font-size: 12px;
+        }
+
+        /* Reminders */
+        .reminders {
+            background-color: khaki;
+            display: inline-flex;
+            flex-grow: 2;
+        }
+
+        .reminders h3 {
+            width: 100%;
+            margin: 10px;
+            color: black;
+            line-height: 90px;
+            font-size: 24px;
+        }
+
+        /* Footer */
+        footer {
+            font-size: 24px;
+        }
+    </style>
+
+    <!-- Header -->
+    <div id='header'>
+        <h1>فهرست امور هفته</h1>
+        <h2 class='tagline'>(اولویتهای هفته در یک نگاه)</h2>
+    </div>
+
+    <!-- App Container -->
+    <div class='container'>
+
+        <!-- To Do Section -->
+        <div class='week'>
+            <div class='row secondary-background'>
+                <div class='day square'>
+                    <h3>شنبه</h3>
+                </div>
+                <div class='task square'>
+                    <p> اینجا اطلاعاتی در خصوص کار هفته‌تان وارد کنید </p>
+                </div>
+                <div class='task square'></div>
+                <div class='task square'></div>
+            </div>
+            <div class='row'>
+                <div class='day square'>
+                    <h3>یکشنبه</h3>
+                </div>
+                <div class='task square'></div>
+                <div class='task square'></div>
+                <div class='task square'></div>
+            </div>
+            <div class='row secondary-background'>
+                <div class='day square'>
+                    <h3>دوشنبه</h3>
+                </div>
+                <div class='task square'></div>
+                <div class='task square'></div>
+                <div class='task square'></div>
+            </div>
+            <div class='row'>
+                <div class='day square'>
+                    <h3>سه شنبه</h3>
+                </div>
+                <div class='task square'></div>
+                <div class='task square'></div>
+                <div class='task square'></div>
+            </div>
+            <div class='row secondary-background'>
+                <div class='day square'>
+                    <h3>چهارشنبه</h3>
+                </div>
+                <div class='task square'></div>
+                <div class='task square'></div>
+                <div class='task square'></div>
+            </div>
+            <div class='row'>
+                <div class='day square'>
+                    <h3>پنج شنبه</h3>
+                </div>
+                <div class='task square'></div>
+                <div class='task square'></div>
+                <div class='task square'></div>
+            </div>
+            <div class='row secondary-background'>
+                <div class='day square'>
+                    <h3>جمعه</h3>
+                </div>
+                <div class='task square'></div>
+                <div class='task square'></div>
+                <div class='task square'></div>
+            </div>
+        </div>
+
+        <!-- Reminders Section -->
+        <div class='reminders'>
+            <h3>یادآور</h3>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <span class='tagline'>حق تألیف برای شرکت محفوظ است</span>
+    </footer>
+</body>
+
+</html>
+
+
+
+</body>
+
+</html>

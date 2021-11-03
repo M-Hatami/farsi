@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="fa">
+
+<head>
+    <link href="common.css" type="text/css" rel="stylesheet">
+    <link href="img/ui/favicon.ico" type="image/x-icon" rel="icon">
+    <style>
+        /* Constraint Validation CSS Pseudo Selectors */
+
+        input,
+        input:after,
+        input:before {
+            /* border: 1px solid #ccc; */
+            border-radius: 0.2 rem;
+            transition: border linear 0.2s, box-shadow linear 0.2s;
+            line-height: 1.4286;
+            font-size: 1rem;
+            color: rgb(32, 33, 36);
+        }
+
+        input:hover::placeholder,
+        input:focus::placeholder {
+            color: transparent;
+        }
+
+        input[type="text"]:enabled,
+        input[type="email"],
+        input[type="number"],
+        textarea,
+        fieldset {
+            border: 1px solid rgb(38, 41, 216);
+            box-sizing: border-box;
+        }
+
+
+        input:focus:valid {
+            border-color: green;
+            box-shadow: inset 0 0.2rem 2rem #fff, 0 0 0.2rem green;
+        }
+
+        input:focus:invalid:required,
+        input:focus:out-of-range:required {
+            border-color: red;
+            box-shadow: inset 0 0.2rem 2rem #fff, 0 0 0.5rem red;
+        }
+
+        input:focus {
+            border-color: #8ccdff;
+            box-shadow: -0.5 0.5rem 0.2rem #fff inset, 0 0 0.5rem #8ccdff;
+            outline: 0;
+        }
+
+        /* -- End of Constraint Validation CSS Pseudo Selectors */
+        /* ----- Password Strength Meter ----*/
+
+
+        /* ----- End of Password Strength Meter ----*/
+    </style>
+
+
+</head>
+
+<body>
+
+    <h2 id='formRequiredValidation'>راستی آزمایی گزینه های واجب و الزامی برگه اطلاعات بوسیله
+        مرورگر </h2>
+
+    <form action="/action_page.php" id="signUpForm" method="post">
+        <label for="title">عنوان</label><br>
+        <input type="text" id="title" autocomplete="honorific-prefix" title="غیرفعال گردید" name="title" value="حکیم"
+            disabled /><br>
+        <label for="fname">نام</label><br>
+        <input type="text" name="fname" id="firstName" autocomplete="given-name" title="فقط حروف فارسی، گزینه واجب"
+            maxlength="25" pattern="^[؀-ۿ]+$" required /><span></span><br>
+        <label for="lname">نام خانوادگی</label><br>
+        <input type="text" name="lname" id="lastName" autocomplete="family-name" title="فقط حروف فارسی، گزینه واجب"
+            maxlength="25" pattern="^[؀-ۿ]+$" required /><span></span><br>
+        <label for="mobile">شماره همراه</label><br>
+        <input dir="ltr" type="tel" name="mobile" id="mobile" autocomplete="mobile"
+            title=" شماره همراه، شما میتوانید پیش‌شماره کشور را قبل از آن بیافزایید" min="11" max="20"
+            placeholder="۰۰۹۸۹۱۲۳۴۵۶۷۸۹" required /><span></span><br>
+        <label for="email">رایانامه</label><br>
+        <input dir="auto" type="email" name="email" id="email" autocomplete="email"
+            title="!رایانامه‌ای به این نشانی برای تایید ارسال میگردد" placeholder="Hossein.Mohammadi@mihanmail.ir"
+            size="45" required /><span></span><br>
+        <label for="pwd">کلمه یا عبارت رمز</label><br>
+        <input type="password" id="pwd" dir="auto" name="pwd" pattern=".{8,}" autocomplete="new-password"
+            title="حداقل تعداد ۸ نویسه یا بیشتر، بهتر است از عبارت رمز بجای کلمه رمز استفاده کنید"><span></span><span
+            data-tooltip="برای رمزی قوی، سعی کنید از ترکیبی از حروف فارسی، اعداد، فاصله، نشانه‌های ویژه مانند (×!@#\$%\^&\*_\+=-\|\\:)\ و قلابها («»/[]/{}) بهره ببرید. همچنین از عبارت و جمله رمز به یادماندنی بجای کلمه رمز استفاده کنید."
+            data - tooltip - position="left" style="margin-right: 1em;" class="circle"><svg id="Layer_1"
+                data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 20 20">
+                <defs>
+                    <style>
+                        .cls-1 {
+                            fill: none;
+                        }
+
+                        .cls-2 {
+                            fill: #5f6368;
+                        }
+                    </style>
+                </defs>
+                <path class="cls-1" d="M0,0H20V20H0Z" />
+                <path class="cls-2"
+                    d="M10.83,5.83H9.17v5h1.66ZM10,18.33A8.33,8.33,0,1,0,1.67,10,8.33,8.33,0,0,0,10,18.33Zm0-15A6.67,6.67,0,1,1,3.33,10,6.68,6.68,0,0,1,10,3.33Zm.83,9.17H9.17v1.67h1.66Z" />
+            </svg></span><br>
+        <progress id="strength" value="0" max="5"></progress><br>
+        <label for="pwd">تایید کلمه یا عبارت رمز</label><br>
+        <input type="confirm"><br>
+        <br>
+        <input type="submit" value="ثبت">
+
+    </form>
+    <p>اطلاع رسانی فارسی</p>
+
+    <hr>
+    <style>
+        .button {
+            display: inline-block;
+            border-radius: 4px;
+            background-color: #f4511e;
+            border: none;
+            text-align: center;
+            font-size: 16px;
+            padding: 0 20px;
+            width: 113px;
+            transition: all 0.5s;
+            cursor: pointer;
+            margin: 5px;
+        }
+
+        .button span {
+            color: #FFFFFF;
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            transition: 0.5s;
+        }
+
+        .button span:after {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            content: '\00bb';
+            position: absolute;
+            opacity: 0;
+            top: 25%;
+            left: -20px;
+            transition: 0.5s;
+        }
+
+        .button:hover span {
+            padding-left: 25px;
+        }
+
+        .button:hover span:after {
+            opacity: 1;
+            left: 0;
+        }
+
+        /*    body {
+            font: 1em sans-serif;
+            width: 200px;
+            padding: 0;
+            margin: 0 auto;
+        }
+
+        p * {
+            display: block;
+        
+
+        input[type=email] {
+            -webkit-appearance: none;
+            appearance: none;
+
+            width: 100%;
+            border: 1px solid #333;
+            margin: 0;
+
+            font-family: inherit;
+            font-size: 90%;
+
+            box-sizing: border-box;
+        }
+*/
+        /* This is our style for the invalid fields */
+        input:invalid {
+            border-color: #900;
+            background-color: #FDD;
+        }
+
+        input:focus:invalid {
+            outline: none;
+        }
+
+        /* This is the style of our error messages */
+        .error {
+            width: 100%;
+            padding: 0;
+
+            font-size: 80%;
+            color: white;
+            background-color: #900;
+            border-radius: 0 0 5px 5px;
+
+            box-sizing: border-box;
+        }
+
+        .error.active::before {
+            content: '\26A0 ';
+            padding: 0 0 0 5px;
+        }
+
+        .error.active {
+            padding: 0.3em;
+        }
+    </style>
+    <h2>شخصی سازی پیامهای
+        خطای راستی آزمایی پیش فرض <bdi><code>HTML</code> Constraint Validation API</bdi>و همچنین گروه بندی کردن عناصر
+        برگه با
+        <bdi><code>&lt;fieldset&gt;</code></bdi>
+        و
+        <bdi><code>&lt;legend&gt;</code></bdi>
+    </h2><br>
+    <div style="margin: 0 auto; display: flex;">
+
+
+        <form action="">
+            <fieldset>
+                <legend>اطلاعات تماس</legend>
+                <label>رایانامه:<br />
+                    <input type="email" name="email" id="rayaNameh" minlength="8" required>
+                    <span class="error" aria-live="polite"></span>
+                </label><br />
+                <label>شماره همراه:<br />
+                    <input type="text" name="mobile" />
+                </label><br />
+                <label>شماره ثابت:<br />
+                    <input type="text" name="telephone" />
+                </label><br>
+            </fieldset>
+
+            <button class="button" style="vertical-align:middle"><span>ارسال</span></button>
+            </span>
+        </form>
+        <hr>
+        <script>
+            // There are many ways to pick a DOM node; here we get the form itself and the email
+            // input box, as well as the span element into which we will place the error message.
+            const form = document.getElementsByTagName('form')[1];
+            const email = document.getElementById('rayaNameh');
+            const emailError = document.querySelector('#rayaNameh + span.error');
+
+            email.addEventListener('input', function (event) {
+                // Each time the user types something, we check if the
+                // form fields are valid.
+
+                if (email.validity.valid) {
+                    // In case there is an error message visible, if the field
+                    // is valid, we remove the error message.
+                    emailError.textContent = ''; // Reset the content of the message
+                    emailError.className = 'error'; // Reset the visual state of the message
+                } else {
+                    // If there is still an error, show the correct error
+                    showError();
+                }
+            });
+
+            form.addEventListener('submit', function (event) {
+                // if the email field is valid, we let the form submit
+
+                if (!email.validity.valid) {
+                    // If it isn't, we display an appropriate error message
+                    showError();
+                    // Then we prevent the form from being sent by canceling the event
+                    event.preventDefault();
+                }
+            });
+
+            function showError() {
+                if (email.validity.valueMissing) {
+                    // If the field is empty,
+                    // display the following error message.
+                    emailError.textContent = 'نشانی رایانامه الزامی است.';
+                } else if (email.validity.typeMismatch) {
+                    // If the field doesn't contain an email address,
+                    // display the following error message.
+                    emailError.textContent = 'شما نیاز دارید یک نشانی صحیح رایانامه وارد کنید. ';
+                } else if (email.validity.tooShort) {
+                    // If the data is too short,
+                    // display the following error message.
+                    emailError.textContent = `نشانی رایانامه حداقل به ${email.minLength} نویسه نیاز دارد; شما تنها ${email.value.length} نویسه وارد کردید.`;
+                }
+
+                // Set the styling appropriately
+                emailError.className = 'error active';
+            }
+        </script>
+
+        <form action="http://www.example.com/review.php" method="get">
+            <fieldset>
+                <legend>
+                    اطلاعات شما:
+                </legend>
+                <label>
+                    نام شما:
+                    <input type="text" name="name" size="30" maxlength="100">
+                </label>
+                <br />
+                <label>
+                    رایانامه:
+                    <input type="email" name="email" size="30" maxlength="100" required>
+                </label>
+                <br />
+            </fieldset>
+            <br />
+            <fieldset>
+                <legend>
+                    نظر شما:
+                </legend>
+                <p>
+                    <label for="hear-about">
+                        از چه طریقی ما را یافتید؟
+                    </label>
+                    <select name="referrer" id="hear-about">
+                        <option value="جستجوگر">جستجوگر</option>
+                        <option value="دوستان">دوستان</option>
+                        <option value="تبلیغات">تبلیغات</option>
+                        <option value="دیگر">دیگر</option>
+                    </select>
+                </p>
+                <p>
+                    آیا هنوز مایلید از این سامانه بازدید کنید؟
+                    <br />
+                    <label>
+                        <input type="radio" name="rating" value="yes" />
+                        بله
+                    </label>
+                    <label>
+                        <input type="radio" name="rating" value="no" />
+                        خیر
+                    </label>
+                    <label>
+                        <input type="radio" name="rating" value="maybe" />
+                        شاید
+                    </label>
+                </p>
+                <p>
+                    <label for="comments">
+                        نظر:
+                    </label>
+                    <br />
+                    <textarea rows="4" cols="40" id="comments">
+</textarea>
+                </p>
+                <label>
+                    <input type="checkbox" name="subscribe" checked="checked" />
+                    برای دریافت بروز رسانیها ثبت نامم کن
+                </label>
+                <br />
+                <input type="submit" value="ثبت نظر" />
+            </fieldset>
+        </form>
+    </div>
+
+    <script src="scripts/form.js"></script>
+    <script src="scripts/toFarsiNumber.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="fa">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>طرح بندی صفحات با شبکه بصورت حرفه‌ای</title>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>سرخط</h1>
+        </header>
+        <nav>
+            <h1>راهنما</h1>
+            <p>یه کم اطلاعات</p>
+            <p>استفاده از fit-content(10em) بعنوان واحد اندازه عرض.</p>
+            <p> 10em اینجا قابل تغییراست و مقداری است که وقتی به آن
+                برسید شروع به wrap کردن محتویات به خط بعد میکند</p>
+        </nav>
+        <section class="right">
+            <h2>راست</h2>
+            <span style="float:left; padding-top: 6%; font-weight: 700;">grid-template فضای خالی با استفاده از نقطه
+                &#8592;</span>
+            <br><br><br><br><br><br><br>
+            <span style="font-weight: 700; color: #fff;"> &#8594; فضای خالی با استفاده از نقطه grid-template</span>
+        </section>
+        <section class="left">
+            <h2>چپ</h2>
+        </section>
+        <section class="leftOverlap">
+            <h2>روی هم</h2>
+        </section>
+        <section class="midOverlap">
+            <h2>روی هم عمودی</h2>
+            <p style="padding-top: 10%; font-weight: 700;">اینجا از واحد minmax(5em, auto) استفاده کردیم</p>
+        </section>
+        <section class="wholeRow">
+            <h2>&#8594; فضای خالی با استفاده از grid-column</h2>
+        </section>
+        <footer>
+            <h3 style="color: #fff;">پانویس</h3>
+        </footer>
+    </div>
+
+
+    <style>
+        .container {
+            display: grid;
+            max-width: 90vw;
+            position: relative;
+            margin: auto;
+            grid-gap: 10px;
+            grid-template: "header header header header"auto "nav right right left"3fr "nav right right ."4fr ". right right .""row row row row""footer footer footer footer"4rem / fit-content(10em) minmax(5em, auto) 4fr 1fr;
+        }
+
+        h1,
+        h2,
+        h3 {
+            text-align: center;
+        }
+
+        header {
+            background-color: rgb(18, 153, 0);
+            grid-area: header;
+        }
+
+        nav {
+            background-color: rgb(236, 236, 146);
+            grid-area: nav;
+        }
+
+        .left {
+            background-color: rgb(119, 0, 0);
+            color: #fff;
+            grid-area: left;
+        }
+
+        .right {
+            background-color: rgba(9, 87, 9, 0.61);
+            grid-area: right;
+        }
+
+        .leftOverlap {
+            background-color: rgba(210, 105, 30, 0.521);
+            grid-area: lOverlap;
+            grid-column-start: 3;
+            grid-column-end: 5;
+            grid-row-start: 4;
+            grid-row-end: 5;
+
+        }
+
+        .midOverlap {
+            background-color: rgba(0, 191, 255, 0.432);
+            grid-area: mOver;
+            grid-column-start: 2;
+            grid-column-end: 3;
+            grid-row-start: 3;
+            grid-row-end: 7;
+            z-index: 1;
+        }
+
+        .wholeRow {
+            grid-area: row;
+            background-color: forestgreen;
+            grid-column: 3 / -1;
+        }
+
+        footer {
+            background-color: rgb(197, 0, 0);
+            grid-area: footer;
+        }
+    </style>
+</body>
+
+</html>

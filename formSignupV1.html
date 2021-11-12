@@ -124,6 +124,10 @@
             justify-content: space-between;
         }
 
+        .reverse {
+            flex-direction: row-reverse;
+        }
+
         form {
             margin: 1rem;
         }
@@ -434,13 +438,19 @@
             background: #e0e0e0;
         }
 
-        a,
-        a:hover {
+        a {
             color: #1a73e8;
             cursor: pointer;
             font-weight: 500;
             text-decoration: none;
             outline: none;
+        }
+
+        a:hover,
+        a:focus {
+            color: #155FBF;
+            font-weight: 600;
+            text-decoration: #174ea6
         }
     </style>
 </head>
@@ -450,7 +460,8 @@
     </header>
     <div class="topContainer">
         <div class="container" id="initialView" role="presentation">
-            <img src="img/ui/logoPlaceholder.svg" width="40px" alt="نشان تجاری" style="padding: 0; margin: 0;">
+            <img src="img/ui/logoPlaceholder.svg" width="40px" alt="نشان تجاری" style="padding: 0; margin: 0;"
+                role="presentation">
             <h1 id="headingText">حسابتان را ثبت کنید</h1>
             <div class="subTitle" id="headingSubtext">ادامه دهید</div>
             <form method="POST" novalidate="" id="signUpForm" action="_goBack.html">
@@ -460,7 +471,7 @@
                             <div class="inputBox">
                                 <div class="inputFlex">
                                     <input type="text" class="lblTxtMod inputTxt" autocomplete="given-name"
-                                        spellcheck="false" tabindex="0" aria-label="First name" name="firstName"
+                                        spellcheck="false" tabindex="0" aria-label="نام" name="firstName"
                                         autocapitalize="none" id="firstName" autofocus placeholder="&#8203;">
                                     <div class=" lblTxt lblTxtTrans" aria-hidden="true">
                                         نام
@@ -474,7 +485,7 @@
                             <div class="inputBox">
                                 <div class="inputFlex">
                                     <input type="text" class="lblTxtMod inputTxt" autocomplete="family-name"
-                                        spellcheck="false" tabindex="0" aria-label="Last name" name="lastName"
+                                        spellcheck="false" tabindex="0" aria-label="نام خانوادگی" name="lastName"
                                         autocapitalize="none" id="lastName" placeholder="&#8203;">
                                     <div class="lblTxt lblTxtTrans" aria-hidden="true">
                                         نام خانوادگی</div>
@@ -491,7 +502,7 @@
                             <div class="inputBox" style="margin-left:16px;">
                                 <div class="inputFlex">
                                     <input type="email" class="lblTxtMod inputTxt" autocomplete="email"
-                                        spellcheck="false" tabindex="0" aria-label="Email" name="Email"
+                                        spellcheck="false" tabindex="0" aria-label="رایانامه" name="Email"
                                         autocapitalize="none" id="email" dir="auto" dirname="emailDirection"
                                         title="!رایانامه‌ای به این نشانی برای تایید ارسال میگردد"
                                         placeholder="Hossein.Mohammadi@mihanmail.ir">
@@ -509,7 +520,7 @@
                             <div class="inputBox" style="margin-left:16px;">
                                 <div class="inputFlex">
                                     <input type="tel" class="lblTxtMod inputTxt" autocomplete="tel" spellcheck="false"
-                                        tabindex="0" aria-label="Mobile" name="mobile" id="mobile"
+                                        tabindex="0" aria-label="شماره همراه" name="mobile" id="mobile"
                                         title=" شماره همراه، شما میتوانید پیش‌شماره کشور را قبل از آن بیافزایید"
                                         min="11" max="20" placeholder="۰۰۹۸۹۱۲۳۴۵۶۷۸۹" dir="ltr">
                                     <div class="lblTxt lblTxtTrans" aria-hidden="true">
@@ -525,7 +536,7 @@
                                 <div class="inputBox">
                                     <div class="inputFlex">
                                         <input type="password" class="lblTxtMod inputTxt" autocomplete="new-password"
-                                            spellcheck="false" tabindex="0" aria-label="Password" name="pwd"
+                                            spellcheck="false" tabindex="0" aria-label="کلمه رمز" name="pwd"
                                             autocapitalize="off" dir="auto" dirname="pwdDirection" id="pwd"
                                             style="text-align: right;" placeholder="&#8203;" required>
                                         <div class=" lblTxt lblTxtTrans" aria-hidden="true">
@@ -540,9 +551,9 @@
                                 <div class="inputBox">
                                     <div id="confirm-passwd" class="inputFlex">
                                         <input type="password" class="lblTxtMod inputTxt" autocomplete="new-password"
-                                            spellcheck="false" tabindex="0" aria-label="Confirm" name="ConfirmPasswd"
-                                            autocapitalize="off" dir="auto" id="pwdConf" style="text-align: right;"
-                                            placeholder="&#8203;" required>
+                                            spellcheck="false" tabindex="0" aria-label="تأیید کلمه رمز"
+                                            name="ConfirmPasswd" autocapitalize="off" dir="auto" id="pwdConf"
+                                            style="text-align: right;" placeholder="&#8203;" required>
                                         <div class=" lblTxt lblTxtTrans" aria-hidden="true">تایید کلمه رمز
                                         </div>
                                         <div class="inputBorder"></div>
@@ -571,19 +582,18 @@
                     <div id="termsHint" class="legend"></div>
                     <div>
                         <div style="margin-left: -8px; margin-top: 26px; min-height: 48px; padding-bottom: 20px;"></div>
-                        <div class="flexBox">
-                            <div>
-                                <button class="signIn btnGen" tabindex="-1">
-                                    <div></div>
-                                    <div></div><span>بجایش میتوانید وارد شوید</span>
-                                </button>
-                            </div>
+                        <div class="flexBox reverse">
                             <button type="submit" class="signUp btnGen" form="signUpForm"
                                 formenctype="application/x-www-form-urlencoded" formmethod="post" tabindex="0"
                                 id="signUpBtn">
                                 <div></div>
                                 <div></div><span>ثبت نام</span>
                             </button>
+                            <div>
+                                <button class="signIn btnGen">
+                                    <div></div><span>بجایش میتوانید وارد شوید</span>
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </section>

@@ -17,6 +17,6 @@ function convToFa() {
     elMobile.value = elMobile.value.toFaNum();
 }
 
-elMobile.addEventListener('focusout', convToFa);
+elMobile.addEventListener('input', convToFa);
 
 //اعداد انگلیسی (0123456789) و اعداد عربی (٠١٢٣٤٥٦٧٨٩) را به اعداد فارسی تبدیل میکند

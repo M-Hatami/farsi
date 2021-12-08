@@ -1,0 +1,43 @@
+html {
+  height: 100%;
+  font-family: "Helvetica", sans-serif;
+}
+
+body {
+  height: 100%;
+}
+
+main {
+  display: flex;
+  margin: 15% 2%;
+}
+
+section {
+  width: 100%;
+  border: 1px solid;
+  padding: 12px;
+}
+
+h3 {
+  height: 2em;
+}
+
+.option {
+  margin-bottom: 0.5em;
+}
+
+input {
+  margin-right: 7px;
+}
+
+#roleInputs {
+  flex-grow: 1;
+}
+
+#companyInputs {
+  flex-grow: 1;
+}
+
+#resultsContainer {
+  flex-grow: 2;
+}

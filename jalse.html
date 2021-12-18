@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>جلسه</title>
+    <meta name="description"
+        content="جلسه گردهمایی برای گفتگوی برخط با قابلیت دیدار تصویری و ارتباط صوتی دوطرفه و همچنین انجمن نطق یکطرفه و ارائه درس در صف دانش آموزان">
+    <link href="img/ui/favicon.ico" type="image/x-icon" rel="icon">
+    <style>
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 110%;
+            line-height: 1.4em;
+            padding: 5px;
+        }
+
+        #flex {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            justify-content: flex-start;
+            max-width: -moz-fit-content;
+            max-width: fit-content;
+            margin: 1em;
+            padding: .5em;
+            border: 1px solid darkgray;
+            border-radius: 1%;
+            box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1),
+                0 0 0 2px rgb(255, 255, 255),
+                0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+            ;
+        }
+
+        #status {
+            background: black;
+            color: white;
+            font-weight: 600;
+            padding: 0 1em;
+        }
+
+        p {
+            margin-block-start: 0;
+            margin-block-end: 1em;
+        }
+
+        bdi {
+            font-weight: bold;
+            font-size: 1.2em;
+            text-shadow: 3px 3px 5px grey;
+            margin-inline-end: .25em;
+        }
+
+        .u1 bdi {
+            color: teal;
+        }
+
+        .u2 bdi {
+            color: chocolate;
+        }
+
+        span {
+            display: inline-block;
+            margin-inline-start: .5em;
+            margin-inline-end: 2em;
+            background-color: antiquewhite;
+            padding: .25em;
+            border-radius: .25em;
+            border: 1px solid #eee;
+        }
+
+        .u1 span {
+            color: black;
+            background-color: bisque;
+        }
+
+        .u2 span {
+            color: white;
+            background-color: chocolate;
+        }
+
+        #selfView {
+            background: black;
+            border: black 1px solid;
+        }
+
+        .app-svg {
+            width: 3em;
+        }
+
+        .icons-default-fill {
+            fill: rgb(3, 114, 40);
+        }
+
+        .icons-filled {
+            display: block;
+            opacity: 1;
+        }
+
+        .icons-unfilled {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="flex">
+        <div id="status"></div>
+        <p dir="auto" class="u1"><bdi>محمد</bdi>: <span class="msg">چطوری اسمت رو به انگلیسی مینویسی؟</span>
+        </p>
+        <p dir="auto" class="u2"><bdi>James</bdi>: <span class="msg">what's your name?</span></p>
+        <p dir="auto" class="u1"><bdi>محمد</bdi>: <span class="msg">ممنون</span></p>
+        <p dir="auto" class="u2"><bdi>James</bdi>: <span class="msg">اون رو اینطوری مینوسند "thank you"</span></p>
+        <p dir="auto" class="u2"><bdi>James</bdi>: <span class="msg">میدونی چطوری باید "لطفاً" رو نوشت؟</span></p>
+        <p dir="auto" class="u1"><bdi>محمد</bdi>: <span class="msg">"please"، درسته؟</span></p>
+        <button onpointerdown="handleCallButton()"><svg viewBox="-6 -6 32 32"
+                class="app-svg icons-call-video icons-video" role="presentation" focusable="false">
+                <g class="icons-default-fill">
+                    <path class="icons-unfilled"
+                        d="M4.5 4C3.11929 4 2 5.11929 2 6.5V13.5C2 14.8807 3.11929 16 4.5 16H11.5C12.8807 16 14 14.8807 14 13.5V12.5L16.4 14.3C17.0592 14.7944 18 14.324 18 13.5V6.49998C18 5.67594 17.0592 5.20556 16.4 5.69998L14 7.49998V6.5C14 5.11929 12.8807 4 11.5 4H4.5ZM14 8.74998L17 6.49998V13.5L14 11.25V8.74998ZM13 6.5V13.5C13 14.3284 12.3284 15 11.5 15H4.5C3.67157 15 3 14.3284 3 13.5V6.5C3 5.67157 3.67157 5 4.5 5H11.5C12.3284 5 13 5.67157 13 6.5Z">
+                    </path>
+                    <g class="icons-filled">
+                        <path
+                            d="M13 6.5C13 5.11929 11.8807 4 10.5 4H4.5C3.11929 4 2 5.11929 2 6.5V13.5C2 14.8807 3.11929 16 4.5 16H10.5C11.8807 16 13 14.8807 13 13.5V6.5Z">
+                        </path>
+                        <path
+                            d="M14 7.93082V12.0815L16.7642 14.4319C17.2512 14.8461 18 14.4999 18 13.8606V6.19315C18 5.55685 17.2575 5.20962 16.7692 5.61756L14 7.93082Z">
+                        </path>
+                    </g>
+                </g>
+            </svg></button>
+
+    </div>
+
+    <video id="selfView" style="display: none;" autoplay></video>
+    <p style="font-size: larger;">برای فعال کردن صوت و تصویر روی کلید دوربین &#8682; بزنید </p>
+    <p>برای تکمیل این برنامه و اطلاعات بیشتر میتوانید به نشانی زیر مراجعه کنید:<br><a
+            href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Promises" target="_blank"
+            rel="noopener noreferrer">Asynchronous Promises</a></p>
+    <script>
+        function setStatusMessage(status) {
+            elm = document.getElementById("status");
+            elm.textContent = status;
+        };
+
+        function handleCallButton(evt) {
+            selfViewElem = document.getElementById("selfView");
+            setStatusMessage("برقراری ارتباط...");
+            navigator.mediaDevices.getUserMedia({ video: true, audio: true })
+                .then(chatStream => {
+                    selfViewElem.style.display = "block";
+                    selfViewElem.srcObject = chatStream;
+                    // the next line is for sending the video stream to the other end of the chat
+                    //  chatStream.getTracks().forEach(track => myPeerConnection.addTrack(track, chatStream));
+                    setStatusMessage("وصل شد");
+                }).catch(err => {
+                    setStatusMessage("مشکلی در اتصال رخ داد");
+
+                });
+        }
+    </script>
+</body>
+
+</html>

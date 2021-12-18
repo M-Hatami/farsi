@@ -14,7 +14,7 @@ function checkName(e) {
     } else {
         elInfBox.style.borderColor = "#d93025";
         elLabel.style.color = "#d93025";
-        elMsg.innerHTML = "&#10007; <span role=\"alert\">۳ تا ۲۵ حرف فارسی</span>";
+        elMsg.innerHTML = "&#10007; ۳ تا ۲۵ حرف فارسی";
         elMsg.style.cssText = "color:#d93025; -webkit-transform: translate(-15px,-10px); transform: translate(-15px,-10px); padding: 0 10px;"
         //"color: #d93025; font-size: 12px; font-weight:200; text-align:center;";
     }
@@ -36,7 +36,7 @@ function checkTelNu(e) {
     } else {
         elInfBox.style.borderColor = "#d93025";
         elLabel.style.color = "#d93025";
-        elMsg.innerHTML = "&#10007; <span role=\"alert\">شماره همراه صحیح نمی‌باشد، دوباره سعی بفرمایید</span>";
+        elMsg.innerHTML = "&#10007; دوباره سعی بفرمایید";
         elMsg.style.cssText = "color:#d93025; -webkit-transform: translate(-15px,-10px); transform: translate(-15px,-10px); padding: 0 10px;";
 
     }
@@ -57,7 +57,7 @@ function checkٍEmail(e) {
     } else {
         elInfBox.style.borderColor = "#d93025";
         elLabel.style.color = "#d93025";
-        elErMsg.innerHTML = alertStyle + "<span role=\"alert\">آدرس رایانامه وارده صحیح نمی‌باشد، لطفاً دوباره سعی کنید.</span>";
+        elErMsg.innerHTML = alertStyle + "آدرس رایانامه وارده صحیح نمی‌باشد، لطفاً دوباره سعی کنید.";
         elErMsg.style.color = "#d93025";
     }
 }
@@ -135,7 +135,7 @@ function pwdConfirmed() {
         elLabel1.style.color = "#d93025";
         elInfBox2.style.borderColor = "#d93025";
         elLabel2.style.color = "#d93025";
-        elErMsg.innerHTML = alertStyle + "<span role=\"alert\">کلمات رمز با هم تطابق ندارند، لطفاً دوباره سعی کنید.</span>";
+        elErMsg.innerHTML = alertStyle + "کلمات رمز با هم تطابق ندارند، لطفاً دوباره سعی کنید.";
         elErMsg.style.color = "#d93025";
     } else if (pwInput.value === pwConf.value && pwConf.value.length > 0) {
         elInfBox1.style.borderColor = "#008000";
@@ -155,7 +155,7 @@ function checkTerms(e) {
         let terms = document.getElementById("termsHint");
         elTerms.parentNode.parentNode.style.color = "#d93025";
         elTerms.parentNode.style.borderColor = "#d93025";
-        terms.innerHTML = alertStyle + "<span role=\"alert\">توافق با مقررات تارنما الزامی است.</span>"
+        terms.innerHTML = alertStyle + "توافق با مقررات تارنما الزامی است."
         terms.style.color = "#d93025";
         e.preventDefault();                                                                 //prevent submit action
     }

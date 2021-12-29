@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>جاوا اسکریپت: نمایش اشعار با حفظ فضای خالی و فاصله</title>
+    <link href="img/ui/favicon.ico" type="image/x-icon" rel="icon">
+    <style>
+        html,
+        pre {
+            font-family: Verdana, Geneva, Tahoma, sans-serif
+        }
+
+        body {
+            width: 700px;
+            margin: 0 auto;
+            background-color: #ccc;
+        }
+
+        pre {
+            line-height: 1.5;
+            letter-spacing: 0.05rem;
+            padding: 1rem;
+            background-color: white;
+            text-align: center;
+        }
+
+        label {
+            width: 200px;
+            margin-right: 33px;
+        }
+
+        select {
+            width: 350px;
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>جاوا اسکریپت: نمایش اشعار با حفظ فضای خالی و فاصله</h1>
+    <h2>استفاده از AJAX برای بروزرسانی صفحه</h2>
+
+    <form>
+        <label for="verse-choose">انتخاب نظم از منظومه</label>
+        <select id="verse-choose" name="verse-choose">
+            <option>شعر ۱</option>
+            <option>شعر ۲</option>
+            <option>شعر ۳</option>
+            <option>شعر ۴</option>
+        </select>
+    </form>
+
+    <h2>مثنوی معنوی, <em>مولانا جلال‌الدین محمد بلخی, ۶۰۴ هجری قمری</em></h2>
+
+    <pre>
+
+    </pre>
+
+    <script>
+        const verseChoose = document.querySelector('select');
+        const poemDisplay = document.querySelector('pre');
+
+        verseChoose.onchange = function () {
+            const verse = verseChoose.value;
+            updateDisplay(verse);
+        };
+        function updateDisplay(verse) {
+            verse = verse.replace(" ", "");
+            let url = verse + '.txt';
+            fetch(url)
+                .then(function (response) {
+                    if (response.ok) {
+                        console.log("Success");
+                        return response.text(); //returns the response as raw text plus promise
+                    } else {
+                        console.log("Fetching is failed!")
+                    }
+                })
+                .then(function (text) {
+                    poemDisplay.textContent = text;
+                });
+        }
+        updateDisplay('شعر ۱');
+        verseChoose.value = 'شعر ۱';
+    </script>
+
+</body>
+
+</html>

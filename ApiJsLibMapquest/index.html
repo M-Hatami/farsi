@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نقشه مپ‌کوئست</title>
+    <link href="../img/ui/favicon.ico" type="image/x-icon" rel="icon">
+    <style>
+        #map {
+            width: 600px;
+            height: 600px;
+        }
+    </style>
+    <script src="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.css" />
+    <script>
+        // 1. The basic part of the example
+        var L;
+
+        window.onload = function () {
+            L.mapquest.key = '9zhAB0SxLInfJbbAghKkzwOrn78r1A9P';
+
+
+            // 'map' refers to a <div> element with the ID map
+            var map = L.mapquest.map('map', {
+                center: [33.59522, 56.92463], //[53.480759, -2.242631],
+                layers: L.mapquest.tileLayer('hybrid'),
+                zoom: 15
+            });
+
+
+            map.addControl(L.mapquest.control({ position: 'bottomleft', title1: 'sd' }));
+
+
+            map.addControl(L.mapquest.satelliteControl({
+                position: 'topright',
+                mapType: 'hybrid',
+                title: 'ماهواره',
+                className: ''
+            }));
+
+            L.marker([33.59522, 56.92463], { //[53.480759, -2.242631], {
+                icon: L.mapquest.icons.marker({
+                    primaryColor: '#1C7435',
+                    secondaryColor: '#358D42',
+                    shadow: true,
+                    size: 'md',
+                    //symbol: 'A'
+                })
+            })
+                .bindPopup('اینجا طبس است!')
+                .addTo(map);
+
+            /*
+                        let searchControl = L.mapquest.searchControl({
+                            className: '',
+                            hoverMarker: {
+                                icon: 'marker',
+                                iconOptions: {
+                                    size: 'sm',
+                                    primaryColor: '#333333',
+                                    secondaryColor: '#333333'
+                                }
+                            },
+                            search: {
+                                sort: 'relevance',
+                                pageSize: 20
+                            },
+                            searchInput: {
+                                searchAheadOptions: {
+                                    limit: 6,
+                                    collection: 'address,adminArea,airport,poi,category,franchise'
+                                },
+                                compactResults: true,
+                                placeholderText: 'جستجو',
+                                clearTitle: 'پاک کردن جستجو'
+                            },
+                            searchLayer: {
+                                buffer: 256,
+                                collisionMargin: 2,
+                                marker: {
+                                    icon: 'via',
+                                    iconOptions: {
+                                        primaryColor: '#ffffff',
+                                        secondaryColor: '#333333',
+                                        size: 'lg'
+                                    },
+                                    popupEnabled: true
+                                },
+                                paddingTopLeft: [420, 20],
+                                paddingBottomRight: [20, 20],
+                                searchResponse: {},
+                                updateResultsOnMapMove: true
+                            }
+                        }).addTo(map);
+            */
+        }
+    </script>
+</head>
+
+<body>
+    <h1>نمونه ساده از مپ‌کوئست</h1>
+
+    <div id="map"></div>
+    <a href="https://developer.mapquest.com/documentation/mapquest-js/v1.3/l-mapquest-tile-layer/" target="_blank"
+        rel="noopener noreferrer">انتخابهای دیگر تنظیمات</a>
+</body>
+
+</html>

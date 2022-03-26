@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ناوش ثانویه یا خرده نان Breadcrumb Secondary Navigation</title>
+    <link href="img/ui/favicon.ico" type="image/x-icon" rel="icon" />
+    <link rel="stylesheet" href="main.css" />
+    <style>
+      body {
+        margin: 10px 35px;
+      }
+
+      p {
+        padding: 10px 40px;
+      }
+
+      .txt {
+        margin: 0 90px;
+      }
+
+      ul {
+        margin-right: 90px;
+      }
+
+      /* -------------simple breadcrumb----------- */
+      .breadcrumb > li {
+        display: inline;
+      }
+
+      .breadcrumb li + li::before {
+        padding: 10px;
+        color: gray;
+        content: ">";
+      }
+
+      .breadcrumb a {
+        text-decoration: none;
+      }
+
+      .breadcrumb a:hover {
+        color: red;
+      }
+    </style>
+
+    <style>
+      /* styled breadcrumb */
+      .breadcrumbStyled {
+        text-align: right;
+      }
+
+      .breadcrumbStyled li {
+        float: right;
+        list-style: none;
+      }
+
+      .breadcrumbStyled a {
+        color: #fff;
+        background: darkcyan;
+        text-decoration: none;
+        position: relative;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        margin-left: 15px;
+        padding: 0 5px;
+        font-size: 1.23rem;
+      }
+
+      .breadcrumbStyled a::before,
+      .breadcrumbStyled a::after {
+        content: "";
+        position: absolute;
+        border-color: darkcyan;
+        border-style: solid;
+        border-width: 15px 5px;
+      }
+
+      .breadcrumbStyled a::before {
+        right: -10px;
+        border-right-color: transparent;
+      }
+
+      .breadcrumbStyled a::after {
+        right: 100%;
+      }
+
+      .breadcrumbStyled a::after {
+        right: 100%;
+        border-color: transparent;
+        border-right-color: darkcyan;
+      }
+
+      .breadcrumbStyled a:hover {
+        background-color: blue;
+      }
+      .breadcrumbStyled a:hover::before {
+        border-color: blue;
+        border-right-color: transparent;
+      }
+      .breadcrumbStyled a:hover::after {
+        border-right-color: blue;
+      }
+    </style>
+    <style>
+      /* -------------- Location & Attribute based breadcrumbs -------------- */
+      h3 {
+        padding: 15px 30px;
+      }
+      .breadcrumbLocAttr a {
+        background-color: inherit;
+        font-size: 16px;
+        padding: 14px;
+        text-align: center;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+      .breadcrumbLocAttr {
+        text-align: right;
+      }
+      .breadcrumbLocAttr li {
+        display: inline;
+        list-style: none;
+        float: right;
+      }
+      .breadcrumbLocAttr li.location + li.location::before {
+        color: gray;
+        content: ">";
+      }
+      .breadcrumbLocAttr a {
+        display: inline;
+      }
+      .attribute a {
+        color: gray;
+      }
+      .attribute a::after {
+        content: " x";
+        font-size: 8px;
+        vertical-align: super;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>ناوش ثانویه Secondary Navigation/Breadcrumb</h1>
+    <h2>ناوش ثانویه ساده / Simple Breadcrumb</h2>
+    <ul class="breadcrumb">
+      <li><a href="shopping.html">خرید</a></li>
+      <li><a href="fashion.html">پوشاک</a></li>
+      <li><a href="men.html">مردانه</a></li>
+      <li><a href="shoes.html">کفش</a></li>
+      <li><a href="flats.html">تخت</a></li>
+      <li>
+        <a href="#">قهوه‌ای</a>
+        <!--href is set to # because the visitor already is on Brown page-->
+      </li>
+    </ul>
+
+    <br />
+    <hr />
+    <br />
+
+    <h2>ناوش ثانویه با اسلوب / Styled Breadcrumb</h2>
+    <ul class="breadcrumbStyled">
+      <li><a href="shopping.html">خرید</a></li>
+      <li><a href="fashion.html">پوشاک</a></li>
+      <li><a href="men.html">مردانه</a></li>
+      <li><a href="shoes.html">کفش</a></li>
+      <li><a href="flats.html">تخت</a></li>
+      <li>
+        <a href="#">قهوه‌ای</a>
+        <!--href is set to # because the visitor already is on Brown page-->
+      </li>
+    </ul>
+
+    <br />
+    <br />
+    <hr />
+    <br />
+
+    <h2>
+      ناوش ثانویه بر اساس مسیر، مکان و خصوصیات / Path, Location and attribute
+      based Breadcrumb
+    </h2>
+    <h3>معرفی</h3>
+    <p>سه نوع اصلی ناوش ثانویه یا خرده نان وجود دارد:</p>
+    <ul class="txt">
+      <li>مکانی</li>
+      <li>خصوصیتی</li>
+      <li>مسیری</li>
+    </ul>
+    <p>ما دو نوع اول را قبلاً مشاهده کردیم:</p>
+    <p>
+      با توجه به ساختار ناوش صفحات تارنما، اطلاعات مبتنی بر موقعیت مکانی بر اساس
+      مکانی است که شما در آن هستید. در مثال خرید کفش در بالا، چهارعنصر اول مبتنی
+      بر مکان هستند. ما در بخش «کفش» سامانه هستیم که در بخش «مردانه» و سپس
+      «پوشاک» و «خرید» میباشد.
+    </p>
+    <p>
+      خرده نانهای مبتنی بر خصوصیت یا ویژگی بر اساس ویژگی های صفحه یا محصولی است
+      که شما در حال مرور آن هستید. در مثال بالا، دو عنصر نهایی مبتنی بر ویژگی
+      هستند. ما در حال خرید کفش هایی هستیم که «تخت» و «قهوه ای» هستند. از آنجایی
+      که ترتیب این ویژگی ها از پیش تعیین شده و تجویزی نیست، برخی از تارنماها این
+      ویژگی‌ها را در یک سطح برابر در رابط کاربری نمایش می دهند. اگر می‌خواهید به
+      کاربران اجازه حذف ویژگی‌ها را بدهید، یک دکمه (x) یا مشابه ارائه دهید تا
+      نشان دهد که می‌توان آنها را حذف کرد.
+    </p>
+    <p>
+      در نهایت، ناوش ثانویه یا خرده نان‌ها را می توان بر اساس مسیر منحصر به فرد
+      کاربر از طریق تارنما تعیین کرد. به عنوان مثال، اگر آنها وارد «صفحه اصلی»
+      شوند، و به صفحه «درباره» و در نهایت صفحه «ثبت نام» بروند، دنباله خرده
+      نانهای آنها ممکن است به شکل زیر باشد:
+    </p>
+
+    <ul class="breadcrumb">
+      <li><a href="home.html">صفحه اصلی</a></li>
+      <li><a href="about.html">درباره</a></li>
+      <li><a href="#">ثبت نام</a></li>
+    </ul>
+    <p>
+      توجه داشته باشید که این مسیر برای هر کاربر و هر بازدید متفاوت خواهد بود.
+      حتی برای تارنماهای با پیچیدگی کمتر هم تعداد مراحل زیاد می‌شود. برای ساده
+      کردن نمایش آن، غالباً ابتدای مسیر با استفاده از «...» مختصر می شود:
+    </p>
+    <ul class="breadcrumb">
+      <li><a href="">...</a></li>
+      <li><a href="about.html">درباره</a></li>
+      <li><a href="#">ثبت نام</a></li>
+    </ul>
+    <br />
+    <h3>مثال برای ناوش ثانویه مبتنی بر مکان و خصوصیت</h3>
+    <p>
+      ۱- نشانه «<strong>></strong>» را فقط بین عناصر ناوش ثانویه مکانی قرار داده
+      میشوند<br />
+      ۲- رنگ عناصر خصوصیتی را به خاکستری تغییر میدهیم تا نشانه ای باشد که به
+      کاربر بفهماند که آنها با عناصر مکانی متفاوت هستند
+      <br />
+      ۳- یک علامت «بستن» بصورت ضربدر توسط شبه انتخابگر <bdi>:after</bdi> به
+      گزینه‌های خصوصیتی می‌افزاییم.
+    </p>
+
+    <ul class="breadcrumbLocAttr">
+      <li class="location"><a href="">...</a></li>
+      <li class="location"><a href="">مسافرخانه</a></li>
+      <li class="attribute"><a href="">حمام</a></li>
+      <li class="attribute"><a href="">تخت‌خواب یکنفره</a></li>
+    </ul>
+    <br />
+    <p>
+      توجه داشته باشید که این قابلیت اجرائی نشده است، ما فقط روی نمایش صفحه
+      متمرکز شده‌ایم.
+    </p>
+  </body>
+</html>

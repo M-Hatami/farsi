@@ -3,7 +3,6 @@
   <h2>خصوصیات و فناوریها</h2>
   <img src="img\ui\SVG\badge-lang-fa.svg" alt="زبان: فارسی">
   <img src="img\ui\SVG\badge-lang-ar.svg" alt="اللغة: العربية">
-  <img src="img\ui\SVG\badge-dir-rtl.svg" alt="جهت: راست به چپ (رب‌چ)">
   </br>
   <code>جهت: راست به چپ (رب‌چ)</code>
   <br/>
